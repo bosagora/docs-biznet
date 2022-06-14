@@ -1,0 +1,94 @@
+# Project information
+site_name: BizNet Documentation
+site_url: https://biznet-documentation.readthedocs.io/
+site_author: BOSAGORA
+docs_dir: "../../docs/en"
+site_dir: "../../generated/en"
+
+# Repository
+repo_name: bosagora/docs-biznet
+repo_url: https://github.com/bosagora/docs-biznet
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2022 BOSAGORA
+
+# Configuration
+theme:
+  name: material
+  custom_dir: "../../overrides/"
+  logo: assets/favicon.ico
+  favicon: assets/favicon.ico
+  language: en
+
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+
+# Customization
+extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: 한국어
+      link: /kr/
+      lang: kr
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/bosagora1
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/BOSAGORA
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/bosagora
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCjcTwkskyTmAwHpqv9Oynig
+    - icon: fontawesome/brands/github
+      link: https://github.com/bosagora
+
+plugins:
+  - search:
+      lang: en
+
+# Page tree
+nav:
+    - Home: index.md
+    - BizNet:
+        - Introduction: biznet/introduction.md
+        - Consensus: biznet/consensus.md
+        - Develop:
+            - BizNet MainNet: biznet/develop/mainnet.md
+            - BizNet TestNet: biznet/develop/testnet.md
+            - BizNet Explorers: biznet/develop/explorers.md
+            - Running Node:
+                - Node: biznet/develop/running_node/node.md
+                - Upgrading Geth : biznet/develop/running_node/upgrading.md
+            - RPC: biznet/develop/rpc.md
+            - Deploy Smart Contract:
+                - Using Remix IDE: biznet/develop/deploy_smart_contract/remix.md
+                - Using Truffle: biznet/develop/deploy_smart_contract/truffle.md
+                - Using Hardhat: biznet/develop/deploy_smart_contract/hardhat.md
+            - Deploy NFTs:
+                - NFT Metadata Standard: biznet/develop/nft/metadata.md
+                - Delply NFT on BizNet: biznet/develop/nft/deploy.md
+            - ERC20 Tokens:
+                - Introduction: biznet/develop/token/intoroduction.md
+                - Issue Token: biznet/develop/token/issue.md
+        - Wallet:
+            - Wallet Guide: biznet/wallet/guide.md
+            - Wallet Key Management: biznet/wallet/key-management.md
+            - Tutorials on Third Party Wallets:
+                - Overview: biznet/wallet/tutorials/overview.md
+                - Metamask: biznet/wallet/tutorials/metamask.md
+                - Ledger Hardware Wallet: biznet/wallet/tutorials/ledge_hardware_wallet.md
+        - Integration: biznet/integration.md
+    - BOA Swap: boa_swap/index.md
