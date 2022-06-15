@@ -1,0 +1,78 @@
+# Project information
+site_name: BizNet Documentation
+site_url: https://biznet-documentation.readthedocs.io/
+site_author: BOSAGORA
+docs_dir: "../../docs/kr"
+site_dir: "../../generated/kr"
+
+# Repository
+repo_name: bosagora/docs-biznet
+repo_url: https://github.com/bosagora/docs-biznet
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2022 BOSAGORA
+
+# Configuration
+theme:
+  name: material
+  custom_dir: "../../overrides/"
+  logo: assets/favicon.ico
+  favicon: assets/favicon.ico
+  language: kr
+
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.integrate
+
+# Customization
+extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: 한국어
+      link: /kr/
+      lang: kr
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/bosagora1
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/BOSAGORA
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/bosagora
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCjcTwkskyTmAwHpqv9Oynig
+    - icon: fontawesome/brands/github
+      link: https://github.com/bosagora
+
+plugins:
+  - search:
+      lang: kr
+
+# Page tree
+nav:
+    - Home: index.md
+    - BizNet:
+        - 소개: biznet/01-introduction.md
+        - 컨센서스: biznet/02-consensus.md
+        - 개발:
+            - BizNet 메인넷: biznet/11-mainnet.md
+            - BizNet 테스트넷: biznet/12-testnet.md
+            - 노드 실행하기: biznet/13-running-node.md
+            - RPC: biznet/14-rpc.md
+            - 스마트컨트랙트 배포: biznet/15-deploy-smart-contract.md
+            - NFT 배포: biznet/16-deploy-nft.md
+            - ERC20 토큰: biznet/17-erc20.md
+        - 통합: biznet/03-integration.md
+    - BOA Swap: boa_swap/index.md
