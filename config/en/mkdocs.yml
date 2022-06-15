@@ -2,6 +2,8 @@
 site_name: BizNet Documentation
 site_url: https://biznet-documentation.readthedocs.io/
 site_author: BOSAGORA
+docs_dir: "../../docs/en"
+site_dir: "../../generated/en"
 
 # Repository
 repo_name: bosagora/docs-biznet
@@ -14,7 +16,10 @@ copyright: Copyright &copy; 2022 BOSAGORA
 # Configuration
 theme:
   name: material
-  custom_dir: docs/overrides
+  custom_dir: "../../overrides/"
+  logo: assets/favicon.ico
+  favicon: assets/favicon.ico
+  language: en
 
   features:
     - content.code.annotate
@@ -30,11 +35,15 @@ theme:
     - search.suggest
     - toc.integrate
 
-  favicon: assets/favicon.ico
-  logo: assets/favicon.ico
-
 # Customization
 extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: 한국어
+      link: /kr/
+      lang: kr
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/bosagora1
@@ -46,6 +55,10 @@ extra:
       link: https://www.youtube.com/channel/UCjcTwkskyTmAwHpqv9Oynig
     - icon: fontawesome/brands/github
       link: https://github.com/bosagora
+
+plugins:
+  - search:
+      lang: en
 
 # Page tree
 nav:
