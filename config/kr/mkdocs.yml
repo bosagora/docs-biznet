@@ -64,15 +64,33 @@ plugins:
 nav:
     - Home: index.md
     - BizNet:
-        - 소개: biznet/01-introduction.md
-        - 컨센서스: biznet/02-consensus.md
+        - 소개: biznet/introduction.md
+        - 컨센서스: biznet/consensus.md
         - 개발:
-            - BizNet 메인넷: biznet/11-mainnet.md
-            - BizNet 테스트넷: biznet/12-testnet.md
-            - 노드 실행하기: biznet/13-running-node.md
-            - RPC: biznet/14-rpc.md
-            - 스마트컨트랙트 배포: biznet/15-deploy-smart-contract.md
-            - NFT 배포: biznet/16-deploy-nft.md
-            - ERC20 토큰: biznet/17-erc20.md
+            - BizNet 메인넷: biznet/develop/mainnet.md
+            - BizNet 테스트넷: biznet/develop/testnet.md
+            - BizNet 블록탐색기: biznet/develop/explorers.md
+            - 노드실행하기:
+                - 노드: biznet/develop/running_node/node.md
+                - 업그레이드 : biznet/develop/running_node/upgrading.md
+            - RPC: biznet/develop/rpc.md
+            - 스마트컨트랙트 배포:
+                - Remix IDE: biznet/develop/deploy_smart_contract/remix.md
+                - Truffle: biznet/develop/deploy_smart_contract/truffle.md
+                - Hardhat: biznet/develop/deploy_smart_contract/hardhat.md
+                - BOAScan에서 배포된 컨트랙트 검증: biznet/develop/deploy_smart_contract/verify.md
+            - NFT:
+                - NFT 표준 매타데아타: biznet/develop/nft/metadata.md
+                - NFT 배포: biznet/develop/nft/deploy.md
+            - ERC20 토큰:
+                - Introduction: biznet/develop/token/intoroduction.md
+                - Issue Token: biznet/develop/token/issue.md
+        - 월렛:
+            - 가이드: biznet/wallet/guide.md
+            - 키관리: biznet/wallet/key-management.md
+            - 다양한 월렛들:
+                - 개요: biznet/wallet/tutorials/overview.md
+                - 메타마스크: biznet/wallet/tutorials/metamask.md
+                - Ledger 하드웨어 월렛: biznet/wallet/tutorials/ledge_hardware_wallet.md
         - 통합: biznet/03-integration.md
     - BOA Swap: boa_swap/index.md
