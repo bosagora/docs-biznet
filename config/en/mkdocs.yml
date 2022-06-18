@@ -77,7 +77,6 @@ nav:
                 - Using Remix IDE: biznet/develop/deploy_smart_contract/remix.md
                 - Using Truffle: biznet/develop/deploy_smart_contract/truffle.md
                 - Using Hardhat: biznet/develop/deploy_smart_contract/hardhat.md
-                - Verify Your Contract on BOAScan: biznet/develop/deploy_smart_contract/verify.md
             - Deploy NFTs:
                 - NFT Metadata Standard: biznet/develop/nft/metadata.md
                 - Delply NFT on BizNet: biznet/develop/nft/deploy.md
