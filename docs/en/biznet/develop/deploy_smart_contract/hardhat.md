@@ -109,13 +109,13 @@ module.exports = {
     hardhat: {
     },
     testnet: {
-      url: "https://testnet-node1.bosagora.org:8545",
+      url: "https://testnet.bosagora.org/",
       chainId: 2019,
       gasPrice: 20000000000,
       accounts: {mnemonic: mnemonic}
     },
     mainnet: {
-      url: "https://node1.bosagora.org/",
+      url: "https://mainnet.bosagora.org/",
       chainId: 2152,
       gasPrice: 20000000000,
       accounts: {mnemonic: mnemonic}

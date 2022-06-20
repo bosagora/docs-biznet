@@ -76,14 +76,14 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
     testnet: {
-      provider: () => new HDWalletProvider(mnemonic, `https://testnet-node1.bosagora.org:8545`),
+      provider: () => new HDWalletProvider(mnemonic, `https://testnet.bosagora.org`),
       network_id: 97,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true
     },
     bsc: {
-      provider: () => new HDWalletProvider(mnemonic, `https://node1.bosagora.org`),
+      provider: () => new HDWalletProvider(mnemonic, `https://mainnet.bosagora.org/`),
       network_id: 56,
       confirmations: 10,
       timeoutBlocks: 200,
@@ -203,7 +203,7 @@ module.exports = {
   networks: {
 
     testnet: {
-        provider: () => new HDWalletProvider(mnemonic, `https://testnet-node1.bosagora.org:8545`),
+        provider: () => new HDWalletProvider(mnemonic, `https://testnet.bosagora.org`),
         network_id: 2019,
         timeoutBlocks: 200,
         confirmations: 5,

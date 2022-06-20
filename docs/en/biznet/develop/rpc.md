@@ -12,20 +12,14 @@ If you need to pull logs frequently, we recommend using WebSockets to push new l
 
 Recommend
 
-* https://node1.bosagora.org/
-* https://node2.bosagora.org/
-* https://node3.bosagora.org/
-* https://node4.bosagora.org/
+* https://mainnet.bosagora.org/
 
 
 ### Testnet(ChainID 0x7E3, 2019 in decimal)
 
 BSC RPC Endpoints:
 
-* https://testnet-node1.bosagora.org:8545/
-* https://testnet-node1.bosagora.org:8545/
-* https://testnet-node1.bosagora.org:8545/
-* https://testnet-node1.bosagora.org:8545/
+* https://testnet.bosagora.org/
 
 
 ## JSON-RPC methods

@@ -56,13 +56,13 @@ Now, We have to deploy our smart contract on BizNet Network. For that, we have t
   * [RPC URLs](../rpc.md)
   * ChainID: 2019
   * Symbol: BOA
-  * Block Explorer: https://testnet-node1.bosagora.org:8545/
+  * Block Explorer: https://testnet.bosagora.org/
 
 * Mainnet
   * [RPC URLs](../rpc.md)
   * ChainID: 2151
   * Symbol: BOA
-  * Block Explorer: https://node1.bosagora.org/
+  * Block Explorer: https://mainnet.bosagora.org/
 
 - Go ahead and click save
 - Copy your address from Metamask
