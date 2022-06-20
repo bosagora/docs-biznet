@@ -101,9 +101,11 @@ or you can download the pre-build binaries from [release page](https://github.co
 
 ```bash
 # Linux
-wget   $(curl -s https://api.github.com/repos/bosagora/go-ethereum/releases/latest |grep browser_ |grep geth_linux |cut -d\" -f4)
+wget   $(curl -s https://api.github.com/repos/bosagora/go-ethereum/releases/latest |grep browser_ |grep linux |cut -d\" -f4)
+unzip linux.zip
 # MacOS
-wget   $(curl -s https://api.github.com/repos/bosagora/go-ethereum/releases/latest |grep browser_ |grep geth_mac |cut -d\" -f4)
+wget   $(curl -s https://api.github.com/repos/bosagora/go-ethereum/releases/latest |grep browser_ |grep mac |cut -d\" -f4)
+unzip mac.zip
 ```
 
 2.Download the config files
