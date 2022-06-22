@@ -88,9 +88,6 @@ nav:
         - 월렛:
             - 가이드: biznet/wallet/guide.md
             - 키관리: biznet/wallet/key-management.md
-            - 다양한 월렛들:
-                - 개요: biznet/wallet/tutorials/overview.md
+            - 월렛:
                 - 메타마스크: biznet/wallet/tutorials/metamask.md
-                - Ledger 하드웨어 월렛: biznet/wallet/tutorials/ledge_hardware_wallet.md
-        - 통합: biznet/03-integration.md
     - BOA Swap: boa_swap/index.md

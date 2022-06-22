@@ -86,9 +86,6 @@ nav:
         - Wallet:
             - Wallet Guide: biznet/wallet/guide.md
             - Wallet Key Management: biznet/wallet/key-management.md
-            - Tutorials on Third Party Wallets:
-                - Overview: biznet/wallet/tutorials/overview.md
+            - Third Party Wallets:
                 - Metamask: biznet/wallet/tutorials/metamask.md
-                - Ledger Hardware Wallet: biznet/wallet/tutorials/ledge_hardware_wallet.md
-        - Integration: biznet/integration.md
     - BOA Swap: boa_swap/index.md

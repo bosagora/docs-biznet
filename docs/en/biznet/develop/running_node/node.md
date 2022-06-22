@@ -69,7 +69,7 @@ Geth supports trusted nodes that are always allowed to reconnect, even if the pe
 
 * Fast Sync
 
-The **default** sync mode. Synchronizes a node doing a fast synchronization by downloading the entire state database, requesting the headers first, and filling in block bodies and receipts afterward. Once the fast sync reaches the best block of the BNB Smart Chain network, it switches to full sync mode.
+The **default** sync mode. Synchronizes a node doing a fast synchronization by downloading the entire state database, requesting the headers first, and filling in block bodies and receipts afterward. Once the fast sync reaches the best block of the BizNet network, it switches to full sync mode.
 
 * Full Sync
 
@@ -115,7 +115,7 @@ Download `genesis.json` and `config.toml` by:
 ```bash
 
 ## mainet
-wget   $(curl -s https://api.github.com/repos/bosagora/go-ethereum/releases/latest |grep browser_ |grep mainnet |cut -d\" -f4)
+wget   $(curl -s https://api.github.com/repos/bosagora/go-ethereum/releases/latest |grep browser_ |grep mainnet |cut -d\" -f4)  
 unzip mainnet.zip
 
 ## testnet
@@ -154,10 +154,7 @@ geth --config ./config.toml --datadir ./node  --cache 8000 --rpc.allow-unprotect
 ```
 
 ## Node Maintainence
-
-### Peer Discovery
-The bootstrap nodes will be enhanced in the short future. So far, a discovery http service will provide some stable public p2p peers for syncing. Please visit https://api.binance.org/v1/discovery/peers to get dynamic peer info. You can append the peer info to the `StaticNodes` in the config.toml to enhance the networking of the nodes. To avoid crowded networking, the discovery service will change the peer info from time to time, try fetch new ones if the connected peers of node are too few.
-
+ 
 ### Binary
 All the clients are suggested to upgrade to the latest release. The [latest version](https://github.com/bosagora/go-ethereum/releases/latest) is supposed to be more stable and get better performance.
 

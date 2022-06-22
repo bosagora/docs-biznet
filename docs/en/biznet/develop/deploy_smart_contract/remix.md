@@ -53,21 +53,22 @@ Now, We have to deploy our smart contract on BizNet Network. For that, we have t
 - Add a new network
 
 * Testnet
-  * [RPC URLs](../rpc.md)
-  * ChainID: 2019
-  * Symbol: BOA
-  * Block Explorer: https://testnet.bosagora.org/
+      * [RPC URLs](../rpc.md)
+      * ChainID: 2019
+      * Symbol: BOA
+      * Block Explorer: https://testnet.bosagora.org/ 
 
 * Mainnet
-  * [RPC URLs](../rpc.md)
-  * ChainID: 2151
-  * Symbol: BOA
-  * Block Explorer: https://mainnet.bosagora.org/
+      * [RPC URLs](../rpc.md)
+      * ChainID: 2151
+      * Symbol: BOA
+      * Block Explorer: https://mainnet.bosagora.org/
 
 - Go ahead and click save
+
 - Copy your address from Metamask
 
-- Head over to Faucet - https://faucet.bosagora.org/address and request test BOA
+- Head over to Faucet - https://faucet.bosagora.org/request/boa/your-address and request test BOA
 
 - Now, let's Deploy the Smart Contract on BizNet Testnet
 - Select Injected Web3 in the Environment dropdown and your contract

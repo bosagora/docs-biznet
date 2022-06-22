@@ -15,12 +15,12 @@ The nodes on the testnet are from the development team.
 
 ### How to get Testnet Fund?
 
-The testnet faucet for BizNet Chain can be accessed https://faucet.bosagora.org/address.
+The testnet faucet for BizNet Chain can be accessed https://faucet.bosagora.org/request/boa/your-address.
 
 **Steps to claim testnet BOA:**
 
-1. Create a new Wallet of BizNet testnet with [MetaMask or MathWallet](../wallet/tutorials/overview)
-2. Get Testnet Fund: https://faucet.bosagora.org/address
+1. Create a new Wallet of BizNet testnet with [MetaMask](../wallet/tutorials/metamask.md)
+2. Get Testnet Fund: https://faucet.bosagora.org/request/boa/your-address
 
 To request funds, please make a tweet with your BizNet address pasted into the contents. Then, copy-paste the tweets URL!
 **BOA** will be sent to your wallet right away.

@@ -68,7 +68,7 @@ module.exports = function(deployer) {
 
 We will use [`truffle develop`](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#develop) to open a Truffle console with a development blockchain
 
-- Head over to https://faucet.bosagora.org/your-address and request test BOA
+- Head over to https://faucet.bosagora.org/request/boa/your-address and request test BOA
 
 
 ```
@@ -316,15 +316,15 @@ My `truffle-config.js` has the following `rinkeby` configuration:
 
 ```
      testnet: {
-      provider: () => new HDWalletProvider(mnemonic, `https://data-seed-prebsc-1-s1.binance.org:8545`),
-      network_id: 97,
+      provider: () => new HDWalletProvider(mnemonic, `https://testnet.bosagora.org`),
+      network_id: 2019,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true
     },
     mainnet: {
-      provider: () => new HDWalletProvider(mnemonic, `https://bsc-dataseed1.binance.org`),
-      network_id: 56,
+      provider: () => new HDWalletProvider(mnemonic, `https://mainnet.bosagora.org`),
+      network_id: 2151,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true

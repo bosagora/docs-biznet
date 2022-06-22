@@ -77,14 +77,14 @@ module.exports = {
     },
     testnet: {
       provider: () => new HDWalletProvider(mnemonic, `https://testnet.bosagora.org`),
-      network_id: 97,
+      network_id: 2019,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true
     },
     bsc: {
       provider: () => new HDWalletProvider(mnemonic, `https://mainnet.bosagora.org/`),
-      network_id: 56,
+      network_id: 2151,
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true

@@ -22,10 +22,10 @@ Then users can use [Remix IDE](https://remix.ethereum.org) and [Metamask](../../
 ```js
 const Web3 = require('web3');
 // mainnet
-const web3 = new Web3('https://mainnet.bosagora.org:443');
+const web3 = new Web3('https://mainnet.bosagora.org');
 
 // testnet
-const web3 = new Web3('https://testnet.bosagora.org:443');
+const web3 = new Web3('https://testnet.bosagora.org');
 ```
 
 ### Create a Wallet
