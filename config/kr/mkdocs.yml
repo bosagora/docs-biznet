@@ -2,8 +2,8 @@
 site_name: BizNet Documentation
 site_url: https://biznet-documentation.readthedocs.io/
 site_author: BOSAGORA
-docs_dir: "../../docs/kr"
-site_dir: "../../generated/kr"
+docs_dir: "../../source/kr"
+site_dir: "../../docs/kr"
 
 # Repository
 repo_name: bosagora/docs-biznet
