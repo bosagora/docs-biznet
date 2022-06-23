@@ -1,37 +1,37 @@
-# Deploy NFTs on BizNet
+# BizNet에 NFT 배포
 
-> This work is inspired by [this blog](https://forum.openzeppelin.com/t/draft-create-an-nft-and-deploy-to-a-public-testnet-using-truffle/2961)
+> 이 문서는 [이 블로그](https://forum.openzeppelin.com/t/draft-create-an-nft-and-deploy-to-a-public-testnet-using-truffle/2961)를 참고하여 작성되었습니다.
 
-In this tutorial we will create a non-fungible token (NFT) and deploy to a public testnet.
+이 튜토리얼에서는 NFT(Non-Fungible Token)를 생성하고 공개 테스트넷에 배포할 것입니다.
 
-ERC721 is a standard for representing ownership of [non-fungible tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#different-kinds-of-tokens), that is, where each token is unique such as in real estate or collectibles.
+ERC721은 부동산이나 수집품과 같이 각 토큰이 고유한 [대체 불가능한 토큰](https://docs.openzeppelin.com/contracts/3.x/tokens#different-kinds-of-tokens) 의 소유권을 나타내는 표준입니다 .
 
-We will use [Presets](https://docs.openzeppelin.com/contracts/3.x/api/presets) contracts in [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/3.x/) to create an ERC721 and deploy using Truffle.
+[OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/) 계약에서 [Presets](https://docs.openzeppelin.com/contracts/3.x/api/presets)을 사용 하여 ERC721을 만들고 Truffle을 사용하여 배포합니다.
 
-## Setting up the Environment
+## 환경 설정
 
-We begin by creating a new project.
+우리는 새로운 프로젝트를 만드는 것으로 시작합니다.
 
 ```
 $ mkdir mynft && cd mynft
 $ npm init -y
 ```
 
-Then we install [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts) which has an implementation of ERC721.
+그런 다음 ERC721 이 구현된 [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts)를 설치합니다.
 
 ```
 $ npm i --save-dev @openzeppelin/contracts
 ```
 
-Next we install a development tool for deployment, for this tutorial we will use [Truffle](https://www.trufflesuite.com/) but we could use any other tools such as Buidler, Remix or [OpenZeppelin CLI](https://docs.openzeppelin.com/cli).
+다음으로 배포용 개발 도구를 설치합니다. 이 자습서에서는 [Truffle](https://www.trufflesuite.com/) 하용하지만 Remix 또는 [OpenZeppelin CLI](https://docs.openzeppelin.com/cli) 와 같은 다른 도구를 사용할 수도 있습니다 .
 
 ```
 $ npm i truffle
 ```
 
-## Getting the Contract Artifacts
+## 스마트 컨트랙트 Artifacts 가져오기
 
-We will setup our Solidity project using `truffle init` to create a `contracts` directory and configuration to connect to a network.
+명령어 `truffle init` 이것을 사용하여 프로젝트를 구성할 것입니다.
 
 ```
 $ npx truffle init
@@ -43,16 +43,16 @@ Starting init...
 Init successful, sweet!
 ```
 
-We are going to use Preset [`ERC721PresetMinterPauserAutoId`](https://docs.openzeppelin.com/contracts/3.x/api/presets#ERC721PresetMinterPauserAutoId) which is an ERC721 that is preset so it can be minted (with auto token ID and metadata URI), paused and burned.
-
-The Preset contracts have already been compiled, so we only need to copy the artifacts to the `build/contracts` directory.
+우리는 Preset [`ERC721PresetMinterPauserAutoId`](https://docs.openzeppelin.com/contracts/3.x/api/presets#ERC721PresetMinterPauserAutoId)를 사용할 것입니다.
+이것은 발행, 일시 중지, 소각기능이 포함되어있는 ERC721입니다.
+`Preset` 계약은 이미 컴파일되었으므로 아티팩트만 build/contracts 디렉터리에 복사하면 됩니다.
 
 ```
 $ mkdir -p build/contracts/
 $ cp node_modules/@openzeppelin/contracts/build/contracts/* build/contracts/
 ```
 
-Using your favorite editor create `2_deploy.js` in the `migrations` directory with the following contents:
+`migrations` 폴더안에 편집기를 사용 하여 다음 내용으로 파일 `2_deploy.js`를 생성합니다.
 
 ```
 // migrations/2_deploy.js
@@ -64,11 +64,11 @@ module.exports = function(deployer) {
 };
 ```
 
-## Deploy the Contract to a Local Blockchain
+## 로컬 블록체인에 계약 배포
 
-We will use [`truffle develop`](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#develop) to open a Truffle console with a development blockchain
+개발을 위해 [`truffle develop`](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#develop)를 사용합니다.
 
-- Head over to https://faucet.bosagora.org/request/boa/your-address and request test BOA
+- 다음을 사용하여 테스트넷 BOA를 요청하세요 https://faucet.bosagora.org/request/boa/:your-address
 
 
 ```
@@ -157,7 +157,7 @@ Summary
 truffle(develop)>
 ```
 
-We can deploy our new NFT to our development blockchain using migrate.
+마이그레이션을 사용하여 새로운 NFT를 개발 블록체인에 배포할 수 있습니다.
 
 ```
 truffle(develop)> migrate
@@ -229,20 +229,20 @@ Summary
 > Final cost:          0.07723676 ETH
 ```
 
-We can then use our deployed contract.
+그런 다음 배포된 계약을 사용할 수 있습니다.
 
 ```
 truffle(develop)> nft = await ERC721PresetMinterPauserAutoId.deployed()
 undefined
 ```
 
-## Interact With Your Token
+## 토큰과 상호 작용
 
-The accounts that we can use were displayed when we started `truffle develop`
+`truffle develop`를 시작할 때 사용할 수 있는 계정이 표시되었습니다 
 
-### Token Metadata
+### 토큰 메타데이터
 
-We can call the contract to read token metadata such as `name`, `symbol` and `baseURI`
+`name`, `symbol`, `baseURI` 와 같은 토큰 메타데이터를 읽기 위해 계약을 호출할 수 있습니다
 
 ```
 truffle(develop)> await nft.name()
@@ -252,12 +252,11 @@ truffle(develop)> await nft.symbol()
 truffle(develop)> await nft.baseURI()
 ```
 
-### Mint
+### 민트
 
-We can send a transaction to mint tokens to a given account, from an account with the minter role.
-In our case we are minting from the account which deployed the token, which is given the minter role.
+발행자 역할이 있는 계정에서 지정된 계정으로 토큰을 발행하는 트랜잭션을 보낼 수 있습니다. 우리의 경우 발행자 역할이 부여된 토큰을 배포한 계정에서 발행합니다.
 
-We will mint 1 NFT with token ID 0.
+토큰 ID가 0인 NFT 1개를 발행합니다.
 
 ```
 truffle(develop)> await nft.mint("0x0445c33bdce670d57189158b88c0034b579f37ce")
@@ -276,7 +275,7 @@ truffle(develop)> await nft.mint("0x0445c33bdce670d57189158b88c0034b579f37ce")
 ...
 ```
 
-We can check the owner of the token and the token URI for the metadata
+토큰의 소유자와 메타데이터에 대한 토큰 URI를 확인할 수 있습니다.
 
 ```
 truffle(develop)> await nft.ownerOf(1)
@@ -284,35 +283,37 @@ truffle(develop)> await nft.ownerOf(1)
 truffle(develop)> await nft.tokenURI(1)
 ```
 
-## Metadata
+## 메타데이터
 
-[EIP-721 2](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md) includes an optional **metadata extension** with a `name`, `symbol` and for each tokenID a `tokenURI` with can point to a JSON file with `name`, `description` and `image` for the given token ID.
+[EIP-721 2](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md)
+에는 가 포함된 선택적 메타데이터 확장 이 포함되어 있으며 name, symbol각 tokenID에 대해 a는 가 포함 tokenURI된 JSON 파일을 가리킬 수 있으며 , name주어진 토큰 ID에 대해서는 가 있습니다.descriptionimage
 
-How you create and host this metadata is up to you.
-I would suggest using a domain that you control to point to where you host the data so that you can move it as required.
+includes an optional **metadata extension** with a `name`, `symbol` and for each tokenID a `tokenURI` with can point to a JSON file with `name`, `description` and `image` for the given token ID.
 
-For this tutorial, we will use [My JSON Server](https://my-json-server.typicode.com/) where we can store a single JSON file in a GitHub repository that we can access via a fake JSON server.
+이 메타데이터를 만들고 호스팅하는 방법은 사용자에게 달려 있습니다. 
+필요에 따라 이동할 수 있도록 데이터를 호스팅하는 위치를 가리키도록 제어하는 도메인을 사용하는 것이 좋습니다.
 
-![:warning:](https://sjc3.discourse-cdn.com/business6/images/emoji/twitter/warning.png?v=9) For production we need to store our metadata in a permanent location that can exist for the life of the token.
+이 자습서에서는 가짜 JSON 서버를 통해 액세스할 수 있는 GitHub 리포지토리에 단일 JSON 파일을 저장할 수 있는 [My JSON Server](https://my-json-server.typicode.com/) 를 사용합니다.
+
+**경고** 프로덕션을 위해 토큰 수명 동안 존재할 수 있는 영구 위치에 메타데이터를 저장해야 합니다.
 
 A sample JSON for tokenID 1 is:
 [http://my-json-server.typicode.com/huangsuyu/nft/tokens/1](http://my-json-server.typicode.com/huangsuyu/nft/tokens/1)
 
-## Deploy to a Public Testnet
+## 테스넷에 배포하기 
 
-Next we will deploy to BizNet testnet .
+다음으로 우리는 BizNet testnet에 배포할 것입니다.
+배포하기 위해 Truffle을 사용하여 [공개 테스트 네트워크에 연결하기 위한 지침](https://forum.openzeppelin.com/t/connecting-to-public-test-networks-with-truffle/2960)을 사용합니다.
 
-To deploy, we will use the instructions for [Connecting to Public Test Networks with Truffle](https://forum.openzeppelin.com/t/connecting-to-public-test-networks-with-truffle/2960)
+다음이 필요합니다.
 
-You will need the following:
-
-- An Infura project ID (or a public node provider of your choice)
+- 테스트넷의 RPC URL
 - `@truffle/hdwallet-provider` installed
-- Configure `truffle-config.js` for Rinkeby network
-- A funded testnet account and mnemonic
-- A `secrets.json` or another secret-management solution. **Make sure you don’t commit this to GitHub!**
+- `truffle-config.js`를 테스트넷용으로 설정하기
+- 자금 지원 테스트넷 계정 및 니모닉
+- `secrets.json` 또는 다른 비밀 관리 솔루션입니다. **이것을 GitHub에 커밋하지 않았는지 확인하십시오!**
 
-My `truffle-config.js` has the following `rinkeby` configuration:
+`truffle-config.js`는 다음과 같습니다.
 
 ```
      testnet: {
@@ -331,7 +332,7 @@ My `truffle-config.js` has the following `rinkeby` configuration:
     },
 ```
 
-### Deploy to BizNet Testnet
+### BizNet 테스트넷에 배포
 
 ```
 $ npx truffle migrate --network testnet
@@ -401,26 +402,24 @@ Summary
 > Final cost:          0.07773058 ETH
 ```
 
-### Mint
+### 민트
 
-We can send a transaction to mint tokens to a given account, from an account with the minter role.
+발행자 역할이 있는 계정에서 지정된 계정으로 토큰을 발행하는 트랜잭션을 보낼 수 있습니다.
 
 ```
 truffle(develop)> nft = await ERC721PresetMinterPauserAutoId.deployed()
 undefined
 ```
 
-In our case we are minting from the account which deployed the token, which is given the minter role.
-
-To see configured accounts run the command `accounts`.
+우리의 경우 발행자 역할이 부여된 토큰을 배포한 계정에서 발행합니다.
+구성된 계정을 보려면 명령 `accounts` 을 실행하십시오
 
 ```
 truffle(rinkeby)> accounts
 [ '0x133d144f52705ceb3f5801b63b9ebccf4102f5ed',
 ```
 
-We will mint 1 NFT with token ID 1. Specify the address that you want to be the token holder (`0xc7e4bBc4269fdC62F879834E363173aeE7895F45` is one of my test accounts)
-
+토큰 ID가 1인 NFT 1개를 발행합니다. 토큰 보유자가 될 주소를 지정합니다 ("0xc7e4bBc4269fdC62F879834E363173aeE7895F45")내 테스트 계정 중 하나임.
 ```
 truffle(rinkeby)> await nft.mint("0x133d144f52705ceb3f5801b63b9ebccf4102f5ed")
 { tx:

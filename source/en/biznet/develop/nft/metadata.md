@@ -24,7 +24,7 @@ The tokenURI function in your Contract should return an HTTP or IPFS URL. When q
 
 ## Metadata Structure
 
-Marketplaces on BizNet support metadata that is structured according to [the official ERC721 metadata standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md). Additionally, several properties for your items are supported, giving you all the sorting and filtering capabilities on BSC Marketplaces.
+Marketplaces on BizNet support metadata that is structured according to [the official ERC721 metadata standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md). Additionally, several properties for your items are supported, giving you all the sorting and filtering capabilities on BizeNet Marketplaces.
 The below metadata structure, allows the BizNet Marketplace to read and display the details about the assets which your NFTs represent.
 
 ```

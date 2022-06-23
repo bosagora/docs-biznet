@@ -293,7 +293,7 @@ I would suggest using a domain that you control to point to where you host the d
 
 For this tutorial, we will use [My JSON Server](https://my-json-server.typicode.com/) where we can store a single JSON file in a GitHub repository that we can access via a fake JSON server.
 
-![:warning:](https://sjc3.discourse-cdn.com/business6/images/emoji/twitter/warning.png?v=9) For production we need to store our metadata in a permanent location that can exist for the life of the token.
+**Warning** For production we need to store our metadata in a permanent location that can exist for the life of the token.
 
 A sample JSON for tokenID 1 is:
 [http://my-json-server.typicode.com/huangsuyu/nft/tokens/1](http://my-json-server.typicode.com/huangsuyu/nft/tokens/1)
@@ -306,13 +306,13 @@ To deploy, we will use the instructions for [Connecting to Public Test Networks 
 
 You will need the following:
 
-- An Infura project ID (or a public node provider of your choice)
+- RPC URL of TestNet
 - `@truffle/hdwallet-provider` installed
-- Configure `truffle-config.js` for Rinkeby network
+- Configure `truffle-config.js` for TestNet
 - A funded testnet account and mnemonic
 - A `secrets.json` or another secret-management solution. **Make sure you don’t commit this to GitHub!**
 
-My `truffle-config.js` has the following `rinkeby` configuration:
+My `truffle-config.js` has the following
 
 ```
      testnet: {

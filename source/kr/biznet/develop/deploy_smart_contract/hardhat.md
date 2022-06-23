@@ -1,47 +1,43 @@
-# Using Hardhat
+# Hardhat 사용하기
 
-## What is Hardhat
+## Hardhat 이란?
 
-Hardhat is a development environment to compile, deploy, test, and debug your smart contract.
+Hardhat은 스마트 계약을 컴파일, 배포, 테스트 및 디버그하기 위한 개발 환경입니다.
 
-## Setting up the development environment
+## 요구 사항:
 
-There are a few technical requirements before we start. Please install the following:
-Requirements:
-
-## Installing
-
-There are a few technical requirements before we start. Please install the following:
-Requirements:
+시작하기 전에 몇 가지 기술 요구 사항이 있습니다. 다음을 설치하십시오: 
 
 - Windows, Linux or Mac OS X
 - [Node.js v8.9.4 LTS or later](https://nodejs.org/en/)
 - [Git](https://git-scm.com/)
 
-First, you need to create an empty project `npm init --yes`
 
-Once your project is ready, you should run
+## 설치하기
 
+먼저 빈 프로젝트를 만들어야 합니다. `npm init --yes`
+프로젝트가 준비되면 다음을 실행해야 합니다.
 ```
 npm install --save-dev hardhat
 ```
-It's recommeded to install some dependencies.
+
+일부 종속성을 설치합니다
 
 ```
 npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
 ```
-To use your local installation of Hardhat, you need to use `npx` to run it (i.e. `npx hardhat`).
+Hardhat를 실행하기 위해서는 npx를 사용하여 실행해야 합니다(예: npx hardhat).
 
-## Create A Project
+## 프로젝트 만들기
 
-To create your Hardhat project run npx hardhat in your project folder:
+Hardhat 프로젝트를 생성하려면 프로젝트 폴더에서 `npx hardhat`을 실행하십시오.
 
 ```
 mkdir MegaCoin
 cd MegaCoin
 ```
 
-- Intialize your project:
+- 프로젝트 초기화:
 
 ```
 $ npx hardhat
@@ -62,22 +58,22 @@ Welcome to Hardhat v2.0.8
   Quit
 ```
 
-Once this project is initialized, you'll now have a project structure with the following items:
+이 프로젝트가 초기화되면 이제 다음 항목이 있는 프로젝트 구조가 생깁니다.
 
-* contracts/: Directory for Solidity contracts
-* scripts/: Directory for scriptable deployment files
-* test/: Directory for test files for testing your application and contracts
-* hardhat-config.js: Hardhat configuration file
+* Contracts/: Solidity 계약 디렉토리
+* scripts/: 스크립팅 가능한 배포 파일의 디렉터리
+* test/: 애플리케이션 및 계약을 테스트하기 위한 테스트 파일 디렉토리
+* hardhat-config.js: Hardhat 구성 파일
 
 
-### Create Contract
+### 스마트 컨트랙트 생성
 
-You can write your own smart contract or download the [ERC20 token smart contract template](../ERC20Token.template).
+자신의 스마트 계약을 작성하거나 [ERC20 토큰 스마트 계약 템플릿](../ERC20Token.template)을 다운로드할 수 있습니다 .
 
-### Config Hardhat for BizNet
+### BizNet을 위한 Hardhat 구성하기
 
-- Go to hardhat.config.js
-- Update the config
+- 파일 hardhat.config.js 를 오픈합니다.
+- 파일 hardhat.config.js 를 다음과 같이 수정합니다.
 
 ```js
 require("@nomiclabs/hardhat-waffle");
@@ -142,27 +138,27 @@ module.exports = {
 
 ```
 
-!!! Note
-It requires mnemonic to be passed in for Provider, this is the seed phrase for the account you'd like to deploy from. Create a new `.secret` file in root directory and enter your 12 word mnemonic seed phrase to get started. To get the seedwords from metamask wallet you can go to Metamask Settings, then from the menu choose Security and Privacy where you will see a button that says reveal seed words.
+**참고**  
+제공자에 대해 전달되는 니모닉이 필요합니다. 이는 배포하려는 계정의 시드 구문입니다. 루트 디렉토리에 새 .secret파일을 만들고 시작하려면 12단어 니모닉 시드 구문을 입력하십시오. 메타마스크 지갑에서 시드워드를 얻으려면 메타마스크 설정으로 이동한 다음 메뉴에서 보안 및 개인정보 보호를 선택하면 시드 단어 공개라는 버튼이 표시됩니다.
 
-### Compile Contract
+### 스마트 컨트랙트 컴파일하기
 
-To compile a Hardhat project, change to the root of the directory where the project is located and then type the following into a terminal:
+Hardhat 프로젝트를 컴파일하려면 프로젝트가 있는 디렉토리의 루트로 변경한 후 터미널에 다음을 입력하십시오.
 ```
 npx hardhat compile
 ```
 
 
-## Deploying on BizNet Network
+## BizNet에 배포하기
 
-Run this command in root of the project directory:
+프로젝트 디렉터리의 루트에서 다음 명령을 실행합니다.
 ```js
 $  npx hardhat run --network testnet scripts/deploy.js
 ```
 
-> Remember your address, transaction_hash and other details provided would differ, Above is just to provide an idea of structure.
+> 귀하의 주소, transaction_hash 및 기타 제공된 세부 정보가 다를 수 있음을 기억하십시오. 위는 구조에 대한 아이디어를 제공하기 위한 것입니다.
 
-**Congratulations!** You have successfully deployed ERC20 Smart Contract. Now you can interact with the Smart Contract.
+**축하합니다!** ERC20 스마트 계약을 성공적으로 배포했습니다. 이제 스마트 계약과 상호 작용할 수 있습니다.
 
-You can check the deployment status here: <https://scan.bosagora.org/> or <https://testnet-scan.bosagora.org/>
+배포 상태는 다음 URL에서 확인할 수 있습니다.  <https://scan.bosagora.org/> 또는 <https://testnet-scan.bosagora.org/>
 

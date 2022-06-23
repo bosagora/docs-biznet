@@ -1,67 +1,72 @@
-# Using Truffle
-## Setting up the development environment
+# Truffle 사용하기
 
-### Requirements
-There are a few technical requirements before we start. Please install the following:
-Requirements:
+## 개발 환경 설정
+
+### 요구 사항
+
+시작하기 전에 몇 가지 기술 요구 사항이 있습니다. 다음을 설치하십시오: 
+
+요구 사항:
 
 - Windows, Linux or Mac OS X
 - [Node.js v8.9.4 LTS or later](https://nodejs.org/en/)
 - [Git](https://git-scm.com/)
 
-**Recommendations for Windows**
-If you're running Truffle on Windows, you may encounter some naming conflicts that could prevent Truffle from executing properly. Please see the section on resolving naming conflicts for solutions.
+#### Windows에 대한 권장 사항
+Windows에서 Truffle을 실행하는 경우 Truffle이 제대로 실행되지 않도록 하는 몇 가지 이름 충돌이 발생할 수 있습니다. 솔루션에 대한 이름 충돌 해결에 대한 섹션을 참조하십시오.
 
-### Installing Truffle
+### Truffle 설치하기
 
-Once we have those installed, we only need one command to install Truffle:
+다음 명령어를 실행하면 됩니다.
 ```
 npm install -g truffle
 ```
-To verify that Truffle is installed properly, type **`truffle version`** on a terminal. If you see an error, make sure that your npm modules are added to your path.
 
-## Project Creation, Compilation, and Configuration
+Truffle이 제대로 설치되었는지 확인하려면 **truffle version** 터미널에 입력하십시오. 오류가 표시되면 npm 모듈이 경로에 추가되었는지 확인하십시오.
 
-The first step is to create a Truffle project. We'll use the *MegaCoin as an example, which creates a token that can be transferred between accounts:
+## 프로젝트 생성, 컴파일 및 구성
 
-### Create a new directory for your Truffle project
+첫 번째 단계는 Truffle 프로젝트를 만드는 것입니다. 계정 간에 전송할 수 있는 토큰을 생성하는 **MegaCoin** 을 예로 사용하겠습니다.
+
+### Truffle 프로젝트를 위한 새 디렉토리 생성
 
 ```
 mkdir MegaCoin
 cd MegaCoin
 ```
 
-### Intialize your project:
+### 프로젝트 초기화
 
-To initialize your project use the following command
+프로젝트를 초기화하려면 다음 명령을 사용하십시오.
 
 ```
 truffle init
 ```
 
-Once this operation is completed, you'll now have a project structure with the following items:
+이 작업이 완료되면 이제 다음 항목이 포함된 프로젝트 구조가 생성됩니다.
 
-* contracts/: Directory for Solidity contracts
-* migrations/: Directory for scriptable deployment files
-* test/: Directory for test files for testing your application and contracts
-* truffle-config.js: Truffle configuration file
+* Contracts/: Solidity 계약 디렉토리
+* 마이그레이션/: 스크립팅 가능한 배포 파일의 디렉터리
+* test/: 애플리케이션 및 계약을 테스트하기 위한 테스트 파일 디렉토리
+* truffle-config.js: 트러플 구성 파일
 
-### Create Contract
+### 스마트 컨트랙트 생성하기
 
-You can write your own smart contract or download the ERC20 token smart contract template.
+자신의 스마트 계약을 작성하거나 ERC20 토큰 스마트 계약 템플릿을 다운로드할 수 있습니다.
 
-### Compile Contract
+### 스마트 컨트랙트 컴파일하기
 
-To compile a Truffle project, change to the root of the directory where the project is located and then type the following into a terminal:
+Truffle 프로젝트를 컴파일하려면 프로젝트가 있는 디렉토리의 루트로 변경한 후 터미널에 다음을 입력하십시오.
+
 ```
 truffle compile
 ```
 
 
-### Config Truffle for BizNet
+### BizNet용 Truffle 구성
 
-- Go to truffle-config.js
-  - Update the truffle-config
+- truffle-config.js 파일을 오픈합니다.
+- truffle-config.js 파일의 다음과 같이 수정합니다.
 
 ```js
 const HDWalletProvider = require('@truffle/hdwallet-provider');
@@ -82,7 +87,7 @@ module.exports = {
       timeoutBlocks: 200,
       skipDryRun: true
     },
-    bsc: {
+    mainnet: {
       provider: () => new HDWalletProvider(mnemonic, `https://mainnet.bosagora.org/`),
       network_id: 2151,
       confirmations: 10,
@@ -105,16 +110,16 @@ module.exports = {
 }
 ```
 
-Notice, it requires mnemonic to be passed in for Provider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started. To get the seedwords from metamask wallet you can go to Metamask Settings, then from the menu choose Security and Privacy where you will see a button that says reveal seed words.
+참고로 제공자에 대해 니모닉을 전달해야 하며 이는 배포하려는 계정의 시드 구문입니다. 루트 디렉터리에 새 .secret 파일을 만들고 시작하려면 12단어 니모닉 시드 구문을 입력하세요. 메타마스크 지갑에서 시드워드를 얻으려면 메타마스크 설정으로 이동한 다음 메뉴에서 보안 및 개인정보 보호를 선택하면 시드 단어 공개라는 버튼이 표시됩니다.
 
 ## Deploying on BizNet Network
 
-Run this command in root of the project directory:
+프로젝트 디렉터리의 루트에서 다음 명령을 실행합니다.
 ```js
 $ truffle migrate --network testnet
 ```
 
-Contract will be deployed on BizNet Testnet, it look like this:
+스마트컨트랙트는 BizNet Testnet에 배포되며 다음과 같습니다.
 
 ```js
 1_initial_migration.js
@@ -153,83 +158,9 @@ Summary
 > Final cost:          0.00383886 ETH
 ```
 
-> Remember your address, transaction_hash and other details provided would differ, Above is just to provide an idea of structure.
+> 귀하의 주소, transaction_hash 및 기타 제공된 세부 정보가 다를 수 있음을 기억하십시오. 위는 구조에 대한 아이디어를 제공하기 위한 것입니다.
 
-**Congratulations!** You have successfully deployed ERC20 Smart Contract. Now you can interact with the Smart Contract.
+**축하합니다!** ERC20 스마트 계약을 성공적으로 배포했습니다. 이제 스마트 계약과 상호 작용할 수 있습니다.
 
-You can check the deployment status here: <https://bscscan.com/> or <https://testnet.bscscan.com/>
+배포 상태는 다음 URL에서 확인할 수 있습니다.  <https://scan.bosagora.org/> 또는 <https://testnet-scan.bosagora.org/>
 
-
-# Verify Your Contract on BscScan
-
-The recommended way to verify a smart contract is using plugin. It is easier to read, imports are maintained, licenses are maintained.
-
-**Verified using Truffle**
-
-Example: <https://testnet.bscscan.com/token/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf>
-
-GitHub Project: <https://github.com/huangsuyu/verify-example>
-
-## BscSCAN plugin for Truffle
-
-Truffle has an BscScan plugin: [truffle-plugin-verify](https://github.com/rkalis/truffle-plugin-verify)
-
-You need to deploy with Truffle to verify with the Truffle verify plugin.
-
-Get API key: https://bscscan.com/myapikey
-
-### Install the plugin
-
-```bash
-npm install -D truffle-plugin-verify
-```
-
-### Configure the plugin
-
-Configure the plugin in `truffle-config.js` using the following command
-
-```js
-const HDWalletProvider = require("@truffle/hdwallet-provider");
-
-// const infuraKey = "fj4jll3k.....";
-//
-const { mnemonic } = require('./env.json');
-
-module.exports = {
-
-  plugins: [
-    'truffle-plugin-verify'
-  ],
-  networks: {
-
-    testnet: {
-        provider: () => new HDWalletProvider(mnemonic, `https://testnet.bosagora.org`),
-        network_id: 2019,
-        timeoutBlocks: 200,
-        confirmations: 5,
-        production: true    // Treats this network as if it was a public net. (default: false)
-    }
-  },
-
-  // Set default mocha options here, use special reporters etc.
-  mocha: {
-    timeout: 100000
-  },
-
-  // Configure your compilers
-  compilers: {
-    solc: {
-       version: "0.5.16",    // Fetch exact version from solc-bin (default: truffle's version)
-      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      settings: {          // See the solidity docs for advice about optimization and evmVersion
-       optimizer: {
-         enabled: false,
-         runs: 200
-       },
-       evmVersion: "byzantium"
-      }
-    },
-  },
-};
-
-```

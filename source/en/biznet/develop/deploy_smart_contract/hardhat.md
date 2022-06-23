@@ -142,7 +142,7 @@ module.exports = {
 
 ```
 
-!!! Note
+**Note**  
 It requires mnemonic to be passed in for Provider, this is the seed phrase for the account you'd like to deploy from. Create a new `.secret` file in root directory and enter your 12 word mnemonic seed phrase to get started. To get the seedwords from metamask wallet you can go to Metamask Settings, then from the menu choose Security and Privacy where you will see a button that says reveal seed words.
 
 ### Compile Contract

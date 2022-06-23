@@ -51,11 +51,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://biznet-documentation.readthedocs.io/biznet/develop/deploy_smart_contract/verify/</loc>
-         <lastmod>2022-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://biznet-documentation.readthedocs.io/biznet/develop/nft/deploy/</loc>
          <lastmod>2022-06-23</lastmod>
          <changefreq>daily</changefreq>

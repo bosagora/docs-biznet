@@ -1,4 +1,5 @@
 # Using Truffle
+
 ## Setting up the development environment
 
 ### Requirements
@@ -9,7 +10,7 @@ Requirements:
 - [Node.js v8.9.4 LTS or later](https://nodejs.org/en/)
 - [Git](https://git-scm.com/)
 
-**Recommendations for Windows**
+#### Recommendations for Windows
 If you're running Truffle on Windows, you may encounter some naming conflicts that could prevent Truffle from executing properly. Please see the section on resolving naming conflicts for solutions.
 
 ### Installing Truffle
@@ -82,7 +83,7 @@ module.exports = {
       timeoutBlocks: 200,
       skipDryRun: true
     },
-    bsc: {
+    mainnet: {
       provider: () => new HDWalletProvider(mnemonic, `https://mainnet.bosagora.org/`),
       network_id: 2151,
       confirmations: 10,
@@ -157,79 +158,5 @@ Summary
 
 **Congratulations!** You have successfully deployed ERC20 Smart Contract. Now you can interact with the Smart Contract.
 
-You can check the deployment status here: <https://bscscan.com/> or <https://testnet.bscscan.com/>
+You can check the deployment status here: <https://scan.bosagora.org/> or <https://testnet-scan.bosagora.org/>
 
-
-# Verify Your Contract on BscScan
-
-The recommended way to verify a smart contract is using plugin. It is easier to read, imports are maintained, licenses are maintained.
-
-**Verified using Truffle**
-
-Example: <https://testnet.bscscan.com/token/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf>
-
-GitHub Project: <https://github.com/huangsuyu/verify-example>
-
-## BscSCAN plugin for Truffle
-
-Truffle has an BscScan plugin: [truffle-plugin-verify](https://github.com/rkalis/truffle-plugin-verify)
-
-You need to deploy with Truffle to verify with the Truffle verify plugin.
-
-Get API key: https://bscscan.com/myapikey
-
-### Install the plugin
-
-```bash
-npm install -D truffle-plugin-verify
-```
-
-### Configure the plugin
-
-Configure the plugin in `truffle-config.js` using the following command
-
-```js
-const HDWalletProvider = require("@truffle/hdwallet-provider");
-
-// const infuraKey = "fj4jll3k.....";
-//
-const { mnemonic } = require('./env.json');
-
-module.exports = {
-
-  plugins: [
-    'truffle-plugin-verify'
-  ],
-  networks: {
-
-    testnet: {
-        provider: () => new HDWalletProvider(mnemonic, `https://testnet.bosagora.org`),
-        network_id: 2019,
-        timeoutBlocks: 200,
-        confirmations: 5,
-        production: true    // Treats this network as if it was a public net. (default: false)
-    }
-  },
-
-  // Set default mocha options here, use special reporters etc.
-  mocha: {
-    timeout: 100000
-  },
-
-  // Configure your compilers
-  compilers: {
-    solc: {
-       version: "0.5.16",    // Fetch exact version from solc-bin (default: truffle's version)
-      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      settings: {          // See the solidity docs for advice about optimization and evmVersion
-       optimizer: {
-         enabled: false,
-         runs: 200
-       },
-       evmVersion: "byzantium"
-      }
-    },
-  },
-};
-
-```

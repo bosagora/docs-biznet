@@ -600,6 +600,19 @@
     Requirements
   </a>
   
+    <nav class="md-nav" aria-label="Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations-for-windows" class="md-nav__link">
+    Recommendations for Windows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -998,6 +1011,19 @@
     Requirements
   </a>
   
+    <nav class="md-nav" aria-label="Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations-for-windows" class="md-nav__link">
+    Recommendations for Windows
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1090,8 +1116,8 @@ Requirements:</p>
 <li><a href="https://nodejs.org/en/">Node.js v8.9.4 LTS or later</a></li>
 <li><a href="https://git-scm.com/">Git</a></li>
 </ul>
-<p><strong>Recommendations for Windows</strong>
-If you're running Truffle on Windows, you may encounter some naming conflicts that could prevent Truffle from executing properly. Please see the section on resolving naming conflicts for solutions.</p>
+<h4 id="recommendations-for-windows">Recommendations for Windows</h4>
+<p>If you're running Truffle on Windows, you may encounter some naming conflicts that could prevent Truffle from executing properly. Please see the section on resolving naming conflicts for solutions.</p>
 <h3 id="installing-truffle">Installing Truffle</h3>
 <p>Once we have those installed, we only need one command to install Truffle:</p>
 <pre><code>npm install -g truffle
@@ -1143,7 +1169,7 @@ module.exports = {
       timeoutBlocks: 200,
       skipDryRun: true
     },
-    bsc: {
+    mainnet: {
       provider: () =&gt; new HDWalletProvider(mnemonic, `https://mainnet.bosagora.org/`),
       network_id: 2151,
       confirmations: 10,
@@ -1210,65 +1236,7 @@ Summary
 <p>Remember your address, transaction_hash and other details provided would differ, Above is just to provide an idea of structure.</p>
 </blockquote>
 <p><strong>Congratulations!</strong> You have successfully deployed ERC20 Smart Contract. Now you can interact with the Smart Contract.</p>
-<p>You can check the deployment status here: <a href="https://bscscan.com/">https://bscscan.com/</a> or <a href="https://testnet.bscscan.com/">https://testnet.bscscan.com/</a></p>
-<h1 id="verify-your-contract-on-bscscan">Verify Your Contract on BscScan</h1>
-<p>The recommended way to verify a smart contract is using plugin. It is easier to read, imports are maintained, licenses are maintained.</p>
-<p><strong>Verified using Truffle</strong></p>
-<p>Example: <a href="https://testnet.bscscan.com/token/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf">https://testnet.bscscan.com/token/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf</a></p>
-<p>GitHub Project: <a href="https://github.com/huangsuyu/verify-example">https://github.com/huangsuyu/verify-example</a></p>
-<h2 id="bscscan-plugin-for-truffle">BscSCAN plugin for Truffle</h2>
-<p>Truffle has an BscScan plugin: <a href="https://github.com/rkalis/truffle-plugin-verify">truffle-plugin-verify</a></p>
-<p>You need to deploy with Truffle to verify with the Truffle verify plugin.</p>
-<p>Get API key: https://bscscan.com/myapikey</p>
-<h3 id="install-the-plugin">Install the plugin</h3>
-<pre><code class="language-bash">npm install -D truffle-plugin-verify
-</code></pre>
-<h3 id="configure-the-plugin">Configure the plugin</h3>
-<p>Configure the plugin in <code>truffle-config.js</code> using the following command</p>
-<pre><code class="language-js">const HDWalletProvider = require(&quot;@truffle/hdwallet-provider&quot;);
-
-// const infuraKey = &quot;fj4jll3k.....&quot;;
-//
-const { mnemonic } = require('./env.json');
-
-module.exports = {
-
-  plugins: [
-    'truffle-plugin-verify'
-  ],
-  networks: {
-
-    testnet: {
-        provider: () =&gt; new HDWalletProvider(mnemonic, `https://testnet.bosagora.org`),
-        network_id: 2019,
-        timeoutBlocks: 200,
-        confirmations: 5,
-        production: true    // Treats this network as if it was a public net. (default: false)
-    }
-  },
-
-  // Set default mocha options here, use special reporters etc.
-  mocha: {
-    timeout: 100000
-  },
-
-  // Configure your compilers
-  compilers: {
-    solc: {
-       version: &quot;0.5.16&quot;,    // Fetch exact version from solc-bin (default: truffle's version)
-      // docker: true,        // Use &quot;0.5.1&quot; you've installed locally with docker (default: false)
-      settings: {          // See the solidity docs for advice about optimization and evmVersion
-       optimizer: {
-         enabled: false,
-         runs: 200
-       },
-       evmVersion: &quot;byzantium&quot;
-      }
-    },
-  },
-};
-
-</code></pre>
+<p>You can check the deployment status here: <a href="https://scan.bosagora.org/">https://scan.bosagora.org/</a> or <a href="https://testnet-scan.bosagora.org/">https://testnet-scan.bosagora.org/</a></p>
 
               
             </article>

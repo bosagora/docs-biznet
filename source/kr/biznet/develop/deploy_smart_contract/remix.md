@@ -1,56 +1,45 @@
----
-sidebar_label: Using Remix IDE
-hide_table_of_contents: false
-sidebar_position: 2
----
+# Remix 사용하기
 
-# Using Remix
+메시지와 함께 ERC20 스마트 계약을 배포하고 프런트 엔드에서 렌더링합니다. 스마트 계약과 쉽게 상호 작용할 수 있습니다!
 
-Deploys a ERC20 smart contract with a message, and renders it in the front-end. You can interact with the smart contract easily!
+이 dApp은 계약에 전달된 메시지를 프런트 엔드로 표시하는 "Hello World" 스타일 애플리케이션을 구현합니다. 
+이 튜토리얼은 [Remix IDE](https://remix.ethereum.org/) 에서 사용할 수 있는 온라인 IDE를 사용하기 위한 것 입니다.
 
-This dapp implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at [Remix IDE](https://remix.ethereum.org/).
+### [Remix IDE](https://remix.ethereum.org/) 설정하기
 
-### Setting Up [Remix IDE](https://remix.ethereum.org/)
+ - Remix는 스마트 계약을 개발하기 위한 온라인 IDE입니다.
+ - Solidity Compiler 및 Deploy and Run Transactions를 선택해야 합니다.
+ - 파일 탐색기로 이동하여 새 파일을 만들고 이름을 MegaCoin.sol로 지정합니다.
+ - 새로 생성된 파일(MegaCoin.sol) 에 아래의 스마트 계약을 복사/붙여넣기 
 
-- Remix is an online IDE to develop smart contracts.
-- You need to choose Solidity Compiler and Deploy and Run Transactions.
+## 스마트 컨트랙트 작성하기
 
+- [여기](../ERC20Token.template) 에서 새로운 스마트컨트랙트 ERC20Token.sol을 만들고 ERC20 토큰 템플릿에서 스마트컨트랙트 코드를 복사 합니다.
+- 요구 사항에 따라 "name", "symbol", "decimals" 및 "totalSupply"를 수정합니다.
 
-- Go to File Explorers, And Create a new file, Name it MegaCoin.sol
+첫 번째 줄 `pragma solidity ^0.8.0`은 소스 코드가 0.8.0 이상의 Solidity 버전용임을 지정합니다.
+[Pragmas](https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#pragma) 는 소스 코드를 처리하는 방법에 대한 컴파일러의 일반적인 지침입니다(예: pragma once).
 
+Solidity에서 계약은 이더리움 블록체인의 특정 주소에 있는 코드(기능)와 데이터(상태)의 모음입니다. 
+문서에서 [constructor](https://solidity.readthedocs.io/en/latest/contracts.html#constructor) 와 [memory](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack) 에 대해 자세히 알아보세요 .
 
+### 스마트 컨트랙트 컴파일
 
-- Copy/Paste the Smart contract below into the newly created file `MegaCoin.sol`
+- 1단계: 버튼을 클릭하여 컴파일 페이지로 전환
 
-## Writing the Smart Contract
+- 2단계: "ERC20Token" 계약 선택
 
-- Create new contract ERC20Token.sol and copy contract code from the bep20 token template [here](../ERC20Token.template)
+- 3단계: "자동 컴파일" 및 "최적화" 활성화
 
-- Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.
+- 4단계: "ABI"를 클릭하여 계약서를 복사하고 저장합니다.
 
+이제 BizNet Network에 스마트 계약을 배포해야 합니다. 이를 위해 우리는 web3 세계에 연결해야 합니다. 이것은 Metamask, Brave, Portis 등과 같은 많은 서비스에서 수행할 수 있습니다. 우리는 Metamask를 사용할 것입니다. 이 [튜토리얼을 따라 메타마스크 계정을 설정 하세요](wallet/metamask.md).
 
-The first line, `pragma solidity ^0.5.16` specifies that the source code is for a Solidity version greater than 0.5.16. [Pragmas](https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#pragma) are common instructions for compilers about how to treat the source code (e.g., pragma once).
+- Metamask를 열고 네트워크 드롭다운에서 Custom RPC를 선택합니다.
 
-A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. Learn more about the [constructor](https://solidity.readthedocs.io/en/latest/contracts.html#constructor) and  [memory](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack) in the docs.
+- 설정 페이지로 이동
 
-### Compile Smart Contract
-
-- Step1: Click button to switch to compile page
-
-- Step2: Select “BEP20Token” contract
-
-- Step3: Enable “Auto compile” and “optimization”
-
--  Step4: Click “ABI” to copy the contract abi and save it.
-
-
-Now, We have to deploy our smart contract on BizNet Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](wallet/metamask.md).
-
-- Open Metamask and select Custom RPC from the networks dropdown
-
-- Go to setting page
-
-- Add a new network
+- 새 네트워크 추가
 
 * Testnet
       * [RPC URLs](../rpc.md)
@@ -64,19 +53,18 @@ Now, We have to deploy our smart contract on BizNet Network. For that, we have t
       * Symbol: BOA
       * Block Explorer: https://mainnet.bosagora.org/
 
-- Go ahead and click save
+- 계속해서 저장을 클릭하십시오
 
-- Copy your address from Metamask
+- 메타마스크에서 주소 복사
 
-- Head over to Faucet - https://faucet.bosagora.org/request/boa/your-address and request test BOA
+- 수도꼭지로 이동 - https://faucet.bosagora.org/request/boa/:your-address 및 테스트 BOA 요청
 
-- Now, let's Deploy the Smart Contract on BizNet Testnet
-- Select Injected Web3 in the Environment dropdown and your contract
+- 이제 BizNet Testnet에 스마트 계약을 배포해 보겠습니다.
+- 환경 드롭다운 및 계약에서 Injected Web3를 선택합니다.
 
-- Accept the Connection Request!
+- 연결 요청을 수락하십시오!
 
-- Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
+- Metamask가 Remix에 연결되면 '배포' 트랜잭션은 트랜잭션 확인이 필요한 또 다른 메타마스크 팝업을 생성합니다.
 
-**Congratulations!** You have successfully deployed a ERC20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: <https://testnet.bscscan.com/>
-
+**축하합니다!** ERC20 계약을 성공적으로 배포했습니다. 이제 스마트 계약과 상호 작용할 수 있습니다. 여기에서 배포 상태를 확인하십시오: <https://testnet-scan.bosagora.org/>
 

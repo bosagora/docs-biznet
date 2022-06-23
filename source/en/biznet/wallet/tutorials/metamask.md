@@ -1,6 +1,6 @@
 # Use MetaMask For BizNet
 
-!!! Tip
+**Tip**  
 If you encounter any network configuration issues in MetaMask, please make sure you have the latest version running.
 
 ## What is it?
@@ -15,21 +15,21 @@ It’s supported in Chrome, Chrome, and Safari browsers.
 
 ![img](assets/metamask01.png)
 
-!!! warning
+**warning**   
 Note: Make sure it’s offered by metamask.io
 
-* Click on “Add to Chrome”
+* Click on "Add to Chrome"
 
 That’s it! You have successfully installed MetaMask extension in Chrome!
 
 ![img](assets/metamask02.png)
 
-!!! Tip
+**Tip**  
 The workflow is the same for all browsers
 
 ## Create an account in MetaMask for BizNet
 
-1. Click on the “Create a wallet” button
+1. Click on the "Create a wallet" button
 
 ![img](assets/metamask03.png)
 
@@ -37,11 +37,11 @@ The workflow is the same for all browsers
 
 ![img](assets/metamask04.png)
 
-3. Click on “Create” and then write down your backup phrase.
+3. Click on "Create" and then write down your backup phrase.
 
 ![img](assets/metamask05.png)
 
-4. Select each phrase in order to make sure it is correct then click “Confirm”.
+4. Select each phrase in order to make sure it is correct then click "Confirm".
 
 ![img](assets/metamask06.png)
 
@@ -75,7 +75,7 @@ Congratulations! you have creat your MetaMask account!
 
 1. Go to faucet page: https://faucet.bosagora.org/request/boa/your-address
 
-!!! Tip
+**Tip**  
 Please note that you can only claim once every minute
 
 After the transfer transaction is sent, you will see an increase of your balance
@@ -152,15 +152,15 @@ After the transfer transaction is sent, you will see an increase of your balance
 
 ![img](assets/metamask19.png)
 
-8. In MetaMask, Click on “Import Tokens”
+8. In MetaMask, Click on "Import Tokens"
 
 ![img](assets/metamask46.png)
 
-9. Choose “Custom Token” and copy the contract address in the box
+9. Choose "Custom Token" and copy the contract address in the box
 
 ![img](assets/metamask47.png)
 
-10.  Click on “Add Custom Tokens”
+10.  Click on "Add Custom Tokens"
 
 ![img](assets/metamask48.png)
 

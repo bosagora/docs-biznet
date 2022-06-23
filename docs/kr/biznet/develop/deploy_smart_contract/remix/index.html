@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-remix" class="md-skip">
+        <a href="#remix" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -574,23 +574,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setting-up-remix-ide" class="md-nav__link">
-    Setting Up Remix IDE
+  <a href="#remix-ide" class="md-nav__link">
+    Remix IDE 설정하기
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#writing-the-smart-contract" class="md-nav__link">
-    Writing the Smart Contract
+  <a href="#_1" class="md-nav__link">
+    스마트 컨트랙트 작성하기
   </a>
   
-    <nav class="md-nav" aria-label="Writing the Smart Contract">
+    <nav class="md-nav" aria-label="스마트 컨트랙트 작성하기">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#compile-smart-contract" class="md-nav__link">
-    Compile Smart Contract
+  <a href="#_2" class="md-nav__link">
+    스마트 컨트랙트 컴파일
   </a>
   
 </li>
@@ -931,23 +931,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setting-up-remix-ide" class="md-nav__link">
-    Setting Up Remix IDE
+  <a href="#remix-ide" class="md-nav__link">
+    Remix IDE 설정하기
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#writing-the-smart-contract" class="md-nav__link">
-    Writing the Smart Contract
+  <a href="#_1" class="md-nav__link">
+    스마트 컨트랙트 작성하기
   </a>
   
-    <nav class="md-nav" aria-label="Writing the Smart Contract">
+    <nav class="md-nav" aria-label="스마트 컨트랙트 작성하기">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#compile-smart-contract" class="md-nav__link">
-    Compile Smart Contract
+  <a href="#_2" class="md-nav__link">
+    스마트 컨트랙트 컴파일
   </a>
   
 </li>
@@ -970,58 +970,51 @@
               
                 
 
-<h1 id="using-remix">Using Remix</h1>
-<p>Deploys a ERC20 smart contract with a message, and renders it in the front-end. You can interact with the smart contract easily!</p>
-<p>This dapp implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at <a href="https://remix.ethereum.org/">Remix IDE</a>.</p>
-<h3 id="setting-up-remix-ide">Setting Up <a href="https://remix.ethereum.org/">Remix IDE</a></h3>
+<h1 id="remix">Remix 사용하기</h1>
+<p>메시지와 함께 ERC20 스마트 계약을 배포하고 프런트 엔드에서 렌더링합니다. 스마트 계약과 쉽게 상호 작용할 수 있습니다!</p>
+<p>이 dApp은 계약에 전달된 메시지를 프런트 엔드로 표시하는 "Hello World" 스타일 애플리케이션을 구현합니다. 
+이 튜토리얼은 <a href="https://remix.ethereum.org/">Remix IDE</a> 에서 사용할 수 있는 온라인 IDE를 사용하기 위한 것 입니다.</p>
+<h3 id="remix-ide"><a href="https://remix.ethereum.org/">Remix IDE</a> 설정하기</h3>
 <ul>
-<li>Remix is an online IDE to develop smart contracts.</li>
+<li>Remix는 스마트 계약을 개발하기 위한 온라인 IDE입니다.</li>
+<li>Solidity Compiler 및 Deploy and Run Transactions를 선택해야 합니다.</li>
+<li>파일 탐색기로 이동하여 새 파일을 만들고 이름을 MegaCoin.sol로 지정합니다.</li>
+<li>새로 생성된 파일(MegaCoin.sol) 에 아래의 스마트 계약을 복사/붙여넣기 </li>
+</ul>
+<h2 id="_1">스마트 컨트랙트 작성하기</h2>
+<ul>
+<li><a href="../../ERC20Token.template">여기</a> 에서 새로운 스마트컨트랙트 ERC20Token.sol을 만들고 ERC20 토큰 템플릿에서 스마트컨트랙트 코드를 복사 합니다.</li>
+<li>요구 사항에 따라 "name", "symbol", "decimals" 및 "totalSupply"를 수정합니다.</li>
+</ul>
+<p>첫 번째 줄 <code>pragma solidity ^0.8.0</code>은 소스 코드가 0.8.0 이상의 Solidity 버전용임을 지정합니다.
+<a href="https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#pragma">Pragmas</a> 는 소스 코드를 처리하는 방법에 대한 컴파일러의 일반적인 지침입니다(예: pragma once).</p>
+<p>Solidity에서 계약은 이더리움 블록체인의 특정 주소에 있는 코드(기능)와 데이터(상태)의 모음입니다. 
+문서에서 <a href="https://solidity.readthedocs.io/en/latest/contracts.html#constructor">constructor</a> 와 <a href="https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack">memory</a> 에 대해 자세히 알아보세요 .</p>
+<h3 id="_2">스마트 컨트랙트 컴파일</h3>
+<ul>
 <li>
-<p>You need to choose Solidity Compiler and Deploy and Run Transactions.</p>
+<p>1단계: 버튼을 클릭하여 컴파일 페이지로 전환</p>
 </li>
 <li>
-<p>Go to File Explorers, And Create a new file, Name it MegaCoin.sol</p>
+<p>2단계: "ERC20Token" 계약 선택</p>
 </li>
 <li>
-<p>Copy/Paste the Smart contract below into the newly created file <code>MegaCoin.sol</code></p>
+<p>3단계: "자동 컴파일" 및 "최적화" 활성화</p>
+</li>
+<li>
+<p>4단계: "ABI"를 클릭하여 계약서를 복사하고 저장합니다.</p>
 </li>
 </ul>
-<h2 id="writing-the-smart-contract">Writing the Smart Contract</h2>
+<p>이제 BizNet Network에 스마트 계약을 배포해야 합니다. 이를 위해 우리는 web3 세계에 연결해야 합니다. 이것은 Metamask, Brave, Portis 등과 같은 많은 서비스에서 수행할 수 있습니다. 우리는 Metamask를 사용할 것입니다. 이 <a href="wallet/metamask.md">튜토리얼을 따라 메타마스크 계정을 설정 하세요</a>.</p>
 <ul>
 <li>
-<p>Create new contract ERC20Token.sol and copy contract code from the bep20 token template <a href="../../ERC20Token.template">here</a></p>
+<p>Metamask를 열고 네트워크 드롭다운에서 Custom RPC를 선택합니다.</p>
 </li>
 <li>
-<p>Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.</p>
-</li>
-</ul>
-<p>The first line, <code>pragma solidity ^0.5.16</code> specifies that the source code is for a Solidity version greater than 0.5.16. <a href="https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#pragma">Pragmas</a> are common instructions for compilers about how to treat the source code (e.g., pragma once).</p>
-<p>A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. Learn more about the <a href="https://solidity.readthedocs.io/en/latest/contracts.html#constructor">constructor</a> and  <a href="https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack">memory</a> in the docs.</p>
-<h3 id="compile-smart-contract">Compile Smart Contract</h3>
-<ul>
-<li>
-<p>Step1: Click button to switch to compile page</p>
+<p>설정 페이지로 이동</p>
 </li>
 <li>
-<p>Step2: Select “BEP20Token” contract</p>
-</li>
-<li>
-<p>Step3: Enable “Auto compile” and “optimization”</p>
-</li>
-<li>
-<p>Step4: Click “ABI” to copy the contract abi and save it.</p>
-</li>
-</ul>
-<p>Now, We have to deploy our smart contract on BizNet Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this <a href="wallet/metamask.md">tutorial to setup a Metamask Account</a>.</p>
-<ul>
-<li>
-<p>Open Metamask and select Custom RPC from the networks dropdown</p>
-</li>
-<li>
-<p>Go to setting page</p>
-</li>
-<li>
-<p>Add a new network</p>
+<p>새 네트워크 추가</p>
 </li>
 <li>
 <p>Testnet</p>
@@ -1042,28 +1035,28 @@
 </ul>
 </li>
 <li>
-<p>Go ahead and click save</p>
+<p>계속해서 저장을 클릭하십시오</p>
 </li>
 <li>
-<p>Copy your address from Metamask</p>
+<p>메타마스크에서 주소 복사</p>
 </li>
 <li>
-<p>Head over to Faucet - https://faucet.bosagora.org/request/boa/your-address and request test BOA</p>
+<p>수도꼭지로 이동 - https://faucet.bosagora.org/request/boa/:your-address 및 테스트 BOA 요청</p>
 </li>
 <li>
-<p>Now, let's Deploy the Smart Contract on BizNet Testnet</p>
+<p>이제 BizNet Testnet에 스마트 계약을 배포해 보겠습니다.</p>
 </li>
 <li>
-<p>Select Injected Web3 in the Environment dropdown and your contract</p>
+<p>환경 드롭다운 및 계약에서 Injected Web3를 선택합니다.</p>
 </li>
 <li>
-<p>Accept the Connection Request!</p>
+<p>연결 요청을 수락하십시오!</p>
 </li>
 <li>
-<p>Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.</p>
+<p>Metamask가 Remix에 연결되면 '배포' 트랜잭션은 트랜잭션 확인이 필요한 또 다른 메타마스크 팝업을 생성합니다.</p>
 </li>
 </ul>
-<p><strong>Congratulations!</strong> You have successfully deployed a ERC20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: <a href="https://testnet.bscscan.com/">https://testnet.bscscan.com/</a></p>
+<p><strong>축하합니다!</strong> ERC20 계약을 성공적으로 배포했습니다. 이제 스마트 계약과 상호 작용할 수 있습니다. 여기에서 배포 상태를 확인하십시오: <a href="https://testnet-scan.bosagora.org/">https://testnet-scan.bosagora.org/</a></p>
 
               
             </article>

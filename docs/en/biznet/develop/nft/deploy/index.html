@@ -1323,7 +1323,7 @@ truffle(develop)&gt; await nft.tokenURI(1)
 <p>How you create and host this metadata is up to you.
 I would suggest using a domain that you control to point to where you host the data so that you can move it as required.</p>
 <p>For this tutorial, we will use <a href="https://my-json-server.typicode.com/">My JSON Server</a> where we can store a single JSON file in a GitHub repository that we can access via a fake JSON server.</p>
-<p><img alt=":warning:" src="https://sjc3.discourse-cdn.com/business6/images/emoji/twitter/warning.png?v=9" /> For production we need to store our metadata in a permanent location that can exist for the life of the token.</p>
+<p><strong>Warning</strong> For production we need to store our metadata in a permanent location that can exist for the life of the token.</p>
 <p>A sample JSON for tokenID 1 is:
 <a href="http://my-json-server.typicode.com/huangsuyu/nft/tokens/1">http://my-json-server.typicode.com/huangsuyu/nft/tokens/1</a></p>
 <h2 id="deploy-to-a-public-testnet">Deploy to a Public Testnet</h2>
@@ -1331,13 +1331,13 @@ I would suggest using a domain that you control to point to where you host the d
 <p>To deploy, we will use the instructions for <a href="https://forum.openzeppelin.com/t/connecting-to-public-test-networks-with-truffle/2960">Connecting to Public Test Networks with Truffle</a></p>
 <p>You will need the following:</p>
 <ul>
-<li>An Infura project ID (or a public node provider of your choice)</li>
+<li>RPC URL of TestNet</li>
 <li><code>@truffle/hdwallet-provider</code> installed</li>
-<li>Configure <code>truffle-config.js</code> for Rinkeby network</li>
+<li>Configure <code>truffle-config.js</code> for TestNet</li>
 <li>A funded testnet account and mnemonic</li>
 <li>A <code>secrets.json</code> or another secret-management solution. <strong>Make sure you don’t commit this to GitHub!</strong></li>
 </ul>
-<p>My <code>truffle-config.js</code> has the following <code>rinkeby</code> configuration:</p>
+<p>My <code>truffle-config.js</code> has the following</p>
 <pre><code>     testnet: {
       provider: () =&gt; new HDWalletProvider(mnemonic, `https://testnet.bosagora.org`),
       network_id: 2019,

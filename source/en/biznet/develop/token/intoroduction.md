@@ -13,7 +13,7 @@ Users just need to fill in `_name`, `_symbol`, `_decimals` and `_totalSupply` ac
   }
 ```
 
-Then users can use [Remix IDE](https://remix.ethereum.org) and [Metamask](../../wallet/tutorials/metamask.md) to compile and deploy the ERC20 contract to BSC.
+Then users can use [Remix IDE](https://remix.ethereum.org) and [Metamask](../../wallet/tutorials/metamask.md) to compile and deploy the ERC20 contract to BizNet.
 
 ## Interact with Contract with [Web3](https://www.npmjs.com/package/web3) and NodeJS.
 

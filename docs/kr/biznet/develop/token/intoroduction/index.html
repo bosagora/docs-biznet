@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#erc20-token-introduction" class="md-skip">
+        <a href="#erc20" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -710,44 +710,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#interact-with-contract-with-web3-and-nodejs" class="md-nav__link">
-    Interact with Contract with Web3 and NodeJS.
+  <a href="#web3-nodejs-contract" class="md-nav__link">
+    Web3 및 NodeJS 를 사용하여 Contract와 상호 작용
   </a>
   
-    <nav class="md-nav" aria-label="Interact with Contract with Web3 and NodeJS.">
+    <nav class="md-nav" aria-label="Web3 및 NodeJS 를 사용하여 Contract와 상호 작용">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connect-to-biznets-public-rpc-endpoint" class="md-nav__link">
-    Connect to BizNet's public RPC endpoint
+  <a href="#biznet-rpc" class="md-nav__link">
+    BizNet의 공용 RPC 연결
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-a-wallet" class="md-nav__link">
-    Create a Wallet
+  <a href="#_1" class="md-nav__link">
+    지갑 만들기
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#recover-a-wallet" class="md-nav__link">
-    Recover a Wallet
+  <a href="#_2" class="md-nav__link">
+    지갑 복구
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#check-balance" class="md-nav__link">
-    Check Balance
+  <a href="#_3" class="md-nav__link">
+    잔액 확인
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-transaction" class="md-nav__link">
-    Create Transaction
+  <a href="#_4" class="md-nav__link">
+    트랜잭션 생성
   </a>
   
 </li>
@@ -952,44 +952,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#interact-with-contract-with-web3-and-nodejs" class="md-nav__link">
-    Interact with Contract with Web3 and NodeJS.
+  <a href="#web3-nodejs-contract" class="md-nav__link">
+    Web3 및 NodeJS 를 사용하여 Contract와 상호 작용
   </a>
   
-    <nav class="md-nav" aria-label="Interact with Contract with Web3 and NodeJS.">
+    <nav class="md-nav" aria-label="Web3 및 NodeJS 를 사용하여 Contract와 상호 작용">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connect-to-biznets-public-rpc-endpoint" class="md-nav__link">
-    Connect to BizNet's public RPC endpoint
+  <a href="#biznet-rpc" class="md-nav__link">
+    BizNet의 공용 RPC 연결
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-a-wallet" class="md-nav__link">
-    Create a Wallet
+  <a href="#_1" class="md-nav__link">
+    지갑 만들기
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#recover-a-wallet" class="md-nav__link">
-    Recover a Wallet
+  <a href="#_2" class="md-nav__link">
+    지갑 복구
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#check-balance" class="md-nav__link">
-    Check Balance
+  <a href="#_3" class="md-nav__link">
+    잔액 확인
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-transaction" class="md-nav__link">
-    Create Transaction
+  <a href="#_4" class="md-nav__link">
+    트랜잭션 생성
   </a>
   
 </li>
@@ -1012,9 +1012,10 @@
               
                 
 
-<h1 id="erc20-token-introduction">ERC20 Token Introduction</h1>
-<p>A ERC20 token must implement the interface <code>IERC20</code> in <a href="../../IERC20.sol">IERC20.sol</a>. This is a template contract <a href="../../ERC20Token.template">ERC20Token.template</a>. 
-Users just need to fill in <code>_name</code>, <code>_symbol</code>, <code>_decimals</code> and <code>_totalSupply</code> according to their own requirements:</p>
+<h1 id="erc20">ERC20 토큰 소개</h1>
+<p>ERC20 토큰은 파일 <a href="../../IERC20.sol">IERC20.sol</a>내의 IERC20의 인터페이스 를 구현해야 합니다.
+이것은 템플릿 계약 <a href="../../ERC20Token.template">ERC20Token.template</a> 입니다
+사용자 는 자신의 요구 사항에 따라 <code>_name</code>, <code>_symbol</code>, <code>_decimals</code>, <code>_totalSupply</code> 를 입력하기만 하면 됩니다.</p>
 <pre><code>  constructor() public {
     _name = {{TOKEN_NAME}};
     _symbol = {{TOKEN_SYMBOL}};
@@ -1025,9 +1026,9 @@ Users just need to fill in <code>_name</code>, <code>_symbol</code>, <code>_deci
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
 </code></pre>
-<p>Then users can use <a href="https://remix.ethereum.org">Remix IDE</a> and <a href="../../../wallet/tutorials/metamask/">Metamask</a> to compile and deploy the ERC20 contract to BSC.</p>
-<h2 id="interact-with-contract-with-web3-and-nodejs">Interact with Contract with <a href="https://www.npmjs.com/package/web3">Web3</a> and NodeJS.</h2>
-<h3 id="connect-to-biznets-public-rpc-endpoint">Connect to BizNet's public RPC endpoint</h3>
+<p>그런 다음 사용자는 <a href="https://remix.ethereum.org">Remix IDE</a> 및 <a href="../../../wallet/tutorials/metamask/">Metamask</a> 를 사용하여 ERC20 계약을 컴파일하고 BizNet에 배포할 수 있습니다.</p>
+<h2 id="web3-nodejs-contract"><a href="https://www.npmjs.com/package/web3">Web3</a> 및 NodeJS 를 사용하여 Contract와 상호 작용</h2>
+<h3 id="biznet-rpc">BizNet의 공용 RPC 연결</h3>
 <pre><code class="language-js">const Web3 = require('web3');
 // mainnet
 const web3 = new Web3('https://mainnet.bosagora.org');
@@ -1035,7 +1036,7 @@ const web3 = new Web3('https://mainnet.bosagora.org');
 // testnet
 const web3 = new Web3('https://testnet.bosagora.org');
 </code></pre>
-<h3 id="create-a-wallet">Create a Wallet</h3>
+<h3 id="_1">지갑 만들기</h3>
 <pre><code class="language-javascript">web3.eth.accounts.create([entropy]);
 
 </code></pre>
@@ -1050,12 +1051,12 @@ const web3 = new Web3('https://testnet.bosagora.org');
 }
 
 </code></pre>
-<h3 id="recover-a-wallet">Recover a Wallet</h3>
+<h3 id="_2">지갑 복구</h3>
 <pre><code class="language-javascript">
 const account = web3.eth.accounts.privateKeyToAccount(&quot;0xe500f5754d761d74c3eb6c2566f4c568b81379bf5ce9c1ecd475d40efe23c577&quot;)
 
 </code></pre>
-<h3 id="check-balance">Check Balance</h3>
+<h3 id="_3">잔액 확인</h3>
 <pre><code class="language-javascript">web3.eth.getBalance(holder).then(console.log);
 
 </code></pre>
@@ -1063,17 +1064,17 @@ const account = web3.eth.accounts.privateKeyToAccount(&quot;0xe500f5754d761d74c3
 <p>The balance will be bumped by e18 for BOA.</p>
 <pre><code>6249621999900000000
 </code></pre>
-<h3 id="create-transaction">Create Transaction</h3>
-<p><strong>Parameters</strong></p>
+<h3 id="_4">트랜잭션 생성</h3>
+<p><strong>파라메타</strong></p>
 <ul>
-<li>Object - The transaction object to send:</li>
-<li>from - String|Number: The address for the sending account. Uses the web3.eth.defaultAccount property, if not specified. Or an address or index of a local wallet in web3.eth.accounts.wallet.</li>
-<li>to - String: (optional) The destination address of the message, left undefined for a contract-creation transaction.</li>
-<li>value - Number|String|BN|BigNumber: (optional) The value transferred for the transaction in wei, also the endowment if it’s a contract-creation transaction.</li>
-<li>gas - Number: (optional, default: To-Be-Determined) The amount of gas to use for the transaction (unused gas is refunded).</li>
-<li>gasPrice - Number|String|BN|BigNumber: (optional) The price of gas for this transaction in wei, defaults to web3.eth.gasPrice.</li>
-<li>data - String: (optional) Either a ABI byte string containing the data of the function call on a contract, or in the case of a contract-creation transaction the initialisation code.</li>
-<li>nonce - Number: (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce.</li>
+<li>Object - 보낼 트랜잭션 개체:</li>
+<li>from - String|Number: 보내는 계정의 주소입니다. 지정하지 않은 경우 web3.eth.defaultAccount 속성을 사용합니다. 또는 web3.eth.accounts.wallet에 있는 로컬 지갑의 주소 또는 인덱스</li>
+<li>to - String: (선택 사항) 메시지의 대상 주소입니다. 컨트랙트 생성을 위한 트랜잭션에서는 정의하지 않습니다.</li>
+<li>value - Number|String|BN|BigNumber: (선택 사항) 트랜잭션을 통해 전송된 BOA이며 그것의 단위는 10^-18입니다. 계약 생성 트랜잭션인 경우에는 기부금입니다.</li>
+<li>gas - Number: (선택 사항, default: To-Be-Determined) 거래에 사용할 가스의 양(사용하지 않은 가스는 환불됨).</li>
+<li>gasPrice - Number|String|BN|BigNumber: (선택 사항) 이 트랜잭션에 대한 가스 가격이며 그것의 단위는 10^-15입니다., 기본값은 web3.eth.gasPrice입니다.</li>
+<li>data - String: (선택 사항) 계약에 대한 함수 호출 데이터를 포함하는 ABI 바이트 문자열 또는 계약 생성 트랜잭션의 경우 초기화 코드입니다.</li>
+<li>nonce - Number: (선택 사항) nonce의 정수입니다. 이를 통해 동일한 nonce를 사용하는 보류 중인 트랜잭션을 덮어쓸 수 있습니다.</li>
 </ul>
 <pre><code class="language-Javascript">
     // // Make a transaction using the promise
