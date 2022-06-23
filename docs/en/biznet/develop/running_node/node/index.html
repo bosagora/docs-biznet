@@ -1285,10 +1285,8 @@ INFO [05-19|14:53:17.525] Persisted trie from memory database      nodes=21 size
 INFO [05-19|14:53:17.528] Successfully wrote genesis state         database=lightchaindata hash=7d79cc…fb0d1e
 </code></pre>
 <p>4.Start your node</p>
-<p>!!! Note
-BREAKING CHANGE: Non-EIP155 transactions (i.e. transactions which are not replay-protected) are now rejected by the RPC API. You can disable this restriction using the --rpc.allow-unprotected-txs command-line flag.</p>
 <pre><code class="language-bash">## start a node
-geth --config ./config.toml --datadir ./node  --cache 8000 --rpc.allow-unprotected-txs --txlookuplimit 0
+geth --config ./config.toml --datadir ./node
 </code></pre>
 <h2 id="node-maintainence">Node Maintainence</h2>
 <h3 id="binary">Binary</h3>

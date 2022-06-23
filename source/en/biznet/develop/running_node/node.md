@@ -145,12 +145,9 @@ INFO [05-19|14:53:17.528] Successfully wrote genesis state         database=ligh
 4.Start your node
 
 
-!!! Note
-BREAKING CHANGE: Non-EIP155 transactions (i.e. transactions which are not replay-protected) are now rejected by the RPC API. You can disable this restriction using the --rpc.allow-unprotected-txs command-line flag.
-
 ```bash
 ## start a node
-geth --config ./config.toml --datadir ./node  --cache 8000 --rpc.allow-unprotected-txs --txlookuplimit 0
+geth --config ./config.toml --datadir ./node
 ```
 
 ## Node Maintainence

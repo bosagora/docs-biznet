@@ -10,8 +10,6 @@ BizNet RPC Endpoints:
 You can make `eth_getLogs` requests with up to a 5K block range.
 If you need to pull logs frequently, we recommend using WebSockets to push new logs to you when they are available.
 
-Recommend
-
 * https://mainnet.bosagora.org/
 
 

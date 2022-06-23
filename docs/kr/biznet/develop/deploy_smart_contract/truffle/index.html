@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-truffle" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -257,9 +262,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../../.." title="BizNet Documentation" class="md-nav__button md-logo" aria-label="BizNet Documentation" data-md-component="logo">
       
@@ -557,10 +560,118 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Truffle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Truffle
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-development-environment" class="md-nav__link">
+    Setting up the development environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the development environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-truffle" class="md-nav__link">
+    Installing Truffle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-creation-compilation-and-configuration" class="md-nav__link">
+    Project Creation, Compilation, and Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Creation, Compilation, and Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-directory-for-your-truffle-project" class="md-nav__link">
+    Create a new directory for your Truffle project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intialize-your-project" class="md-nav__link">
+    Intialize your project:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-contract" class="md-nav__link">
+    Create Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compile-contract" class="md-nav__link">
+    Compile Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config-truffle-for-biznet" class="md-nav__link">
+    Config Truffle for BizNet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-on-biznet-network" class="md-nav__link">
+    Deploying on BizNet Network
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -575,20 +686,6 @@
     <li class="md-nav__item">
       <a href="../hardhat/" class="md-nav__link">
         Hardhat
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../verify/" class="md-nav__link">
-        BOAScan에서 배포된 컨트랙트 검증
       </a>
     </li>
   
@@ -869,15 +966,309 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-development-environment" class="md-nav__link">
+    Setting up the development environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the development environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-truffle" class="md-nav__link">
+    Installing Truffle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-creation-compilation-and-configuration" class="md-nav__link">
+    Project Creation, Compilation, and Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Creation, Compilation, and Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-directory-for-your-truffle-project" class="md-nav__link">
+    Create a new directory for your Truffle project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intialize-your-project" class="md-nav__link">
+    Intialize your project:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-contract" class="md-nav__link">
+    Create Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compile-contract" class="md-nav__link">
+    Compile Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config-truffle-for-biznet" class="md-nav__link">
+    Config Truffle for BizNet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-on-biznet-network" class="md-nav__link">
+    Deploying on BizNet Network
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-  <h1>Truffle</h1>
+<h1 id="using-truffle">Using Truffle</h1>
+<h2 id="setting-up-the-development-environment">Setting up the development environment</h2>
+<h3 id="requirements">Requirements</h3>
+<p>There are a few technical requirements before we start. Please install the following:
+Requirements:</p>
+<ul>
+<li>Windows, Linux or Mac OS X</li>
+<li><a href="https://nodejs.org/en/">Node.js v8.9.4 LTS or later</a></li>
+<li><a href="https://git-scm.com/">Git</a></li>
+</ul>
+<p><strong>Recommendations for Windows</strong>
+If you're running Truffle on Windows, you may encounter some naming conflicts that could prevent Truffle from executing properly. Please see the section on resolving naming conflicts for solutions.</p>
+<h3 id="installing-truffle">Installing Truffle</h3>
+<p>Once we have those installed, we only need one command to install Truffle:</p>
+<pre><code>npm install -g truffle
+</code></pre>
+<p>To verify that Truffle is installed properly, type <strong><code>truffle version</code></strong> on a terminal. If you see an error, make sure that your npm modules are added to your path.</p>
+<h2 id="project-creation-compilation-and-configuration">Project Creation, Compilation, and Configuration</h2>
+<p>The first step is to create a Truffle project. We'll use the *MegaCoin as an example, which creates a token that can be transferred between accounts:</p>
+<h3 id="create-a-new-directory-for-your-truffle-project">Create a new directory for your Truffle project</h3>
+<pre><code>mkdir MegaCoin
+cd MegaCoin
+</code></pre>
+<h3 id="intialize-your-project">Intialize your project:</h3>
+<p>To initialize your project use the following command</p>
+<pre><code>truffle init
+</code></pre>
+<p>Once this operation is completed, you'll now have a project structure with the following items:</p>
+<ul>
+<li>contracts/: Directory for Solidity contracts</li>
+<li>migrations/: Directory for scriptable deployment files</li>
+<li>test/: Directory for test files for testing your application and contracts</li>
+<li>truffle-config.js: Truffle configuration file</li>
+</ul>
+<h3 id="create-contract">Create Contract</h3>
+<p>You can write your own smart contract or download the ERC20 token smart contract template.</p>
+<h3 id="compile-contract">Compile Contract</h3>
+<p>To compile a Truffle project, change to the root of the directory where the project is located and then type the following into a terminal:</p>
+<pre><code>truffle compile
+</code></pre>
+<h3 id="config-truffle-for-biznet">Config Truffle for BizNet</h3>
+<ul>
+<li>Go to truffle-config.js</li>
+<li>Update the truffle-config</li>
+</ul>
+<pre><code class="language-js">const HDWalletProvider = require('@truffle/hdwallet-provider');
+const fs = require('fs');
+const mnemonic = fs.readFileSync(&quot;.secret&quot;).toString().trim();
+
+module.exports = {
+  networks: {
+    development: {
+      host: &quot;127.0.0.1&quot;,     // Localhost (default: none)
+      port: 8545,            // Standard RPC port (default: none)
+      network_id: &quot;*&quot;,       // Any network (default: none)
+    },
+    testnet: {
+      provider: () =&gt; new HDWalletProvider(mnemonic, `https://testnet.bosagora.org`),
+      network_id: 2019,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+    bsc: {
+      provider: () =&gt; new HDWalletProvider(mnemonic, `https://mainnet.bosagora.org/`),
+      network_id: 2151,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+  },
+
+  // Set default mocha options here, use special reporters etc.
+  mocha: {
+    // timeout: 100000
+  },
+
+  // Configure your compilers
+  compilers: {
+    solc: {
+      version: &quot;^0.6.12&quot;, // A version or constraint - Ex. &quot;^0.5.0&quot;
+    }
+  }
+}
+</code></pre>
+<p>Notice, it requires mnemonic to be passed in for Provider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started. To get the seedwords from metamask wallet you can go to Metamask Settings, then from the menu choose Security and Privacy where you will see a button that says reveal seed words.</p>
+<h2 id="deploying-on-biznet-network">Deploying on BizNet Network</h2>
+<p>Run this command in root of the project directory:</p>
+<pre><code class="language-js">$ truffle migrate --network testnet
+</code></pre>
+<p>Contract will be deployed on BizNet Testnet, it look like this:</p>
+<pre><code class="language-js">1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   &gt; transaction hash:    0xaf4502198400bde2148eb4274b08d727a17080b685cd2dcd4aee13d8eb954adc
+   &gt; Blocks: 3            Seconds: 9
+   &gt; contract address:    0x81eCD10b61978D9160428943a0c0Fb31a5460466
+   &gt; block number:        3223948
+   &gt; block timestamp:     1604049862
+   &gt; account:             0x623ac9f6E62A8134bBD5Dc96D9B8b29b4B60e45F
+   &gt; balance:             6.24574114
+   &gt; gas used:            191943 (0x2edc7)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.00383886 ETH
+
+   Pausing for 5 confirmations...
+   ------------------------------
+   &gt; confirmation number: 2 (block: 3223952)
+   &gt; confirmation number: 3 (block: 3223953)
+   &gt; confirmation number: 4 (block: 3223954)
+   &gt; confirmation number: 6 (block: 3223956)
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.00383886 ETH
 
 
+Summary
+=======
+&gt; Total deployments:   1
+&gt; Final cost:          0.00383886 ETH
+</code></pre>
+<blockquote>
+<p>Remember your address, transaction_hash and other details provided would differ, Above is just to provide an idea of structure.</p>
+</blockquote>
+<p><strong>Congratulations!</strong> You have successfully deployed ERC20 Smart Contract. Now you can interact with the Smart Contract.</p>
+<p>You can check the deployment status here: <a href="https://bscscan.com/">https://bscscan.com/</a> or <a href="https://testnet.bscscan.com/">https://testnet.bscscan.com/</a></p>
+<h1 id="verify-your-contract-on-bscscan">Verify Your Contract on BscScan</h1>
+<p>The recommended way to verify a smart contract is using plugin. It is easier to read, imports are maintained, licenses are maintained.</p>
+<p><strong>Verified using Truffle</strong></p>
+<p>Example: <a href="https://testnet.bscscan.com/token/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf">https://testnet.bscscan.com/token/0x68D2E27940CA48109Fa3DaD0D2C8B27E64a0c6cf</a></p>
+<p>GitHub Project: <a href="https://github.com/huangsuyu/verify-example">https://github.com/huangsuyu/verify-example</a></p>
+<h2 id="bscscan-plugin-for-truffle">BscSCAN plugin for Truffle</h2>
+<p>Truffle has an BscScan plugin: <a href="https://github.com/rkalis/truffle-plugin-verify">truffle-plugin-verify</a></p>
+<p>You need to deploy with Truffle to verify with the Truffle verify plugin.</p>
+<p>Get API key: https://bscscan.com/myapikey</p>
+<h3 id="install-the-plugin">Install the plugin</h3>
+<pre><code class="language-bash">npm install -D truffle-plugin-verify
+</code></pre>
+<h3 id="configure-the-plugin">Configure the plugin</h3>
+<p>Configure the plugin in <code>truffle-config.js</code> using the following command</p>
+<pre><code class="language-js">const HDWalletProvider = require(&quot;@truffle/hdwallet-provider&quot;);
+
+// const infuraKey = &quot;fj4jll3k.....&quot;;
+//
+const { mnemonic } = require('./env.json');
+
+module.exports = {
+
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  networks: {
+
+    testnet: {
+        provider: () =&gt; new HDWalletProvider(mnemonic, `https://testnet.bosagora.org`),
+        network_id: 2019,
+        timeoutBlocks: 200,
+        confirmations: 5,
+        production: true    // Treats this network as if it was a public net. (default: false)
+    }
+  },
+
+  // Set default mocha options here, use special reporters etc.
+  mocha: {
+    timeout: 100000
+  },
+
+  // Configure your compilers
+  compilers: {
+    solc: {
+       version: &quot;0.5.16&quot;,    // Fetch exact version from solc-bin (default: truffle's version)
+      // docker: true,        // Use &quot;0.5.1&quot; you've installed locally with docker (default: false)
+      settings: {          // See the solidity docs for advice about optimization and evmVersion
+       optimizer: {
+         enabled: false,
+         runs: 200
+       },
+       evmVersion: &quot;byzantium&quot;
+      }
+    },
+  },
+};
+
+</code></pre>
 
               
             </article>
@@ -1001,7 +1392,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.649a939e.min.js"></script>
