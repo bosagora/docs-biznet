@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-remix" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -257,9 +262,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../../.." title="BizNet Documentation" class="md-nav__button md-logo" aria-label="BizNet Documentation" data-md-component="logo">
       
@@ -543,10 +546,63 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Remix IDE
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Remix IDE
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-remix-ide" class="md-nav__link">
+    Setting Up Remix IDE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-the-smart-contract" class="md-nav__link">
+    Writing the Smart Contract
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing the Smart Contract">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compile-smart-contract" class="md-nav__link">
+    Compile Smart Contract
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -575,20 +631,6 @@
     <li class="md-nav__item">
       <a href="../hardhat/" class="md-nav__link">
         Hardhat
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../verify/" class="md-nav__link">
-        BOAScan에서 배포된 컨트랙트 검증
       </a>
     </li>
   
@@ -869,15 +911,159 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-remix-ide" class="md-nav__link">
+    Setting Up Remix IDE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-the-smart-contract" class="md-nav__link">
+    Writing the Smart Contract
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing the Smart Contract">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compile-smart-contract" class="md-nav__link">
+    Compile Smart Contract
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-  <h1>Remix IDE</h1>
-
-
+<h1 id="using-remix">Using Remix</h1>
+<p>Deploys a ERC20 smart contract with a message, and renders it in the front-end. You can interact with the smart contract easily!</p>
+<p>This dapp implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at <a href="https://remix.ethereum.org/">Remix IDE</a>.</p>
+<h3 id="setting-up-remix-ide">Setting Up <a href="https://remix.ethereum.org/">Remix IDE</a></h3>
+<ul>
+<li>Remix is an online IDE to develop smart contracts.</li>
+<li>
+<p>You need to choose Solidity Compiler and Deploy and Run Transactions.</p>
+</li>
+<li>
+<p>Go to File Explorers, And Create a new file, Name it MegaCoin.sol</p>
+</li>
+<li>
+<p>Copy/Paste the Smart contract below into the newly created file <code>MegaCoin.sol</code></p>
+</li>
+</ul>
+<h2 id="writing-the-smart-contract">Writing the Smart Contract</h2>
+<ul>
+<li>
+<p>Create new contract ERC20Token.sol and copy contract code from the bep20 token template <a href="../../ERC20Token.template">here</a></p>
+</li>
+<li>
+<p>Modify “name”, “symbol”, “decimals” and “totalSupply” according to your requirements.</p>
+</li>
+</ul>
+<p>The first line, <code>pragma solidity ^0.5.16</code> specifies that the source code is for a Solidity version greater than 0.5.16. <a href="https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#pragma">Pragmas</a> are common instructions for compilers about how to treat the source code (e.g., pragma once).</p>
+<p>A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. Learn more about the <a href="https://solidity.readthedocs.io/en/latest/contracts.html#constructor">constructor</a> and  <a href="https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack">memory</a> in the docs.</p>
+<h3 id="compile-smart-contract">Compile Smart Contract</h3>
+<ul>
+<li>
+<p>Step1: Click button to switch to compile page</p>
+</li>
+<li>
+<p>Step2: Select “BEP20Token” contract</p>
+</li>
+<li>
+<p>Step3: Enable “Auto compile” and “optimization”</p>
+</li>
+<li>
+<p>Step4: Click “ABI” to copy the contract abi and save it.</p>
+</li>
+</ul>
+<p>Now, We have to deploy our smart contract on BizNet Network. For that, we have to connect to web3 world, this can be done my many services like Metamask, Brave, Portis etc. We will be using Metamask. Please follow this <a href="wallet/metamask.md">tutorial to setup a Metamask Account</a>.</p>
+<ul>
+<li>
+<p>Open Metamask and select Custom RPC from the networks dropdown</p>
+</li>
+<li>
+<p>Go to setting page</p>
+</li>
+<li>
+<p>Add a new network</p>
+</li>
+<li>
+<p>Testnet</p>
+<ul>
+<li><a href="../../rpc/">RPC URLs</a></li>
+<li>ChainID: 2019</li>
+<li>Symbol: BOA</li>
+<li>Block Explorer: https://testnet.bosagora.org/ </li>
+</ul>
+</li>
+<li>
+<p>Mainnet</p>
+<ul>
+<li><a href="../../rpc/">RPC URLs</a></li>
+<li>ChainID: 2151</li>
+<li>Symbol: BOA</li>
+<li>Block Explorer: https://mainnet.bosagora.org/</li>
+</ul>
+</li>
+<li>
+<p>Go ahead and click save</p>
+</li>
+<li>
+<p>Copy your address from Metamask</p>
+</li>
+<li>
+<p>Head over to Faucet - https://faucet.bosagora.org/request/boa/your-address and request test BOA</p>
+</li>
+<li>
+<p>Now, let's Deploy the Smart Contract on BizNet Testnet</p>
+</li>
+<li>
+<p>Select Injected Web3 in the Environment dropdown and your contract</p>
+</li>
+<li>
+<p>Accept the Connection Request!</p>
+</li>
+<li>
+<p>Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.</p>
+</li>
+</ul>
+<p><strong>Congratulations!</strong> You have successfully deployed a ERC20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: <a href="https://testnet.bscscan.com/">https://testnet.bscscan.com/</a></p>
 
               
             </article>
@@ -1001,7 +1187,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.649a939e.min.js"></script>

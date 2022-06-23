@@ -8,9 +8,9 @@ BizNet provides explorers for both its mainnet and testnet.
 
 ### Explorers for Mainnet
 
-* BOASCAN - https://scan.bosagora.org/
+* BOASCAN - [https://scan.bosagora.org/](https://scan.bosagora.org/)
 
 ### Explorers for Testnet
 
-* BOASCAN - https://testnet-scan.bosagora.org/
+* BOASCAN - [https://testnet-scan.bosagora.org/](https://testnet-scan.bosagora.org/)
 

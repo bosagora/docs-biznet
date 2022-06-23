@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#deploy-nfts-on-biznet" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -257,9 +262,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../../.." title="BizNet Documentation" class="md-nav__button md-logo" aria-label="BizNet Documentation" data-md-component="logo">
       
@@ -571,20 +574,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../deploy_smart_contract/verify/" class="md-nav__link">
-        BOAScan에서 배포된 컨트랙트 검증
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -646,10 +635,118 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          NFT 배포
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         NFT 배포
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-environment" class="md-nav__link">
+    Setting up the Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-contract-artifacts" class="md-nav__link">
+    Getting the Contract Artifacts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-contract-to-a-local-blockchain" class="md-nav__link">
+    Deploy the Contract to a Local Blockchain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interact-with-your-token" class="md-nav__link">
+    Interact With Your Token
+  </a>
+  
+    <nav class="md-nav" aria-label="Interact With Your Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#token-metadata" class="md-nav__link">
+    Token Metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mint" class="md-nav__link">
+    Mint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-to-a-public-testnet" class="md-nav__link">
+    Deploy to a Public Testnet
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy to a Public Testnet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-to-biznet-testnet" class="md-nav__link">
+    Deploy to BizNet Testnet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mint_1" class="md-nav__link">
+    Mint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -869,15 +966,483 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-environment" class="md-nav__link">
+    Setting up the Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-contract-artifacts" class="md-nav__link">
+    Getting the Contract Artifacts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-contract-to-a-local-blockchain" class="md-nav__link">
+    Deploy the Contract to a Local Blockchain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interact-with-your-token" class="md-nav__link">
+    Interact With Your Token
+  </a>
+  
+    <nav class="md-nav" aria-label="Interact With Your Token">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#token-metadata" class="md-nav__link">
+    Token Metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mint" class="md-nav__link">
+    Mint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-to-a-public-testnet" class="md-nav__link">
+    Deploy to a Public Testnet
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy to a Public Testnet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-to-biznet-testnet" class="md-nav__link">
+    Deploy to BizNet Testnet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mint_1" class="md-nav__link">
+    Mint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-  <h1>NFT 배포</h1>
+<h1 id="deploy-nfts-on-biznet">Deploy NFTs on BizNet</h1>
+<blockquote>
+<p>This work is inspired by <a href="https://forum.openzeppelin.com/t/draft-create-an-nft-and-deploy-to-a-public-testnet-using-truffle/2961">this blog</a></p>
+</blockquote>
+<p>In this tutorial we will create a non-fungible token (NFT) and deploy to a public testnet.</p>
+<p>ERC721 is a standard for representing ownership of <a href="https://docs.openzeppelin.com/contracts/3.x/tokens#different-kinds-of-tokens">non-fungible tokens</a>, that is, where each token is unique such as in real estate or collectibles.</p>
+<p>We will use <a href="https://docs.openzeppelin.com/contracts/3.x/api/presets">Presets</a> contracts in <a href="https://docs.openzeppelin.com/contracts/3.x/">OpenZeppelin Contracts</a> to create an ERC721 and deploy using Truffle.</p>
+<h2 id="setting-up-the-environment">Setting up the Environment</h2>
+<p>We begin by creating a new project.</p>
+<pre><code>$ mkdir mynft &amp;&amp; cd mynft
+$ npm init -y
+</code></pre>
+<p>Then we install <a href="https://docs.openzeppelin.com/contracts">OpenZeppelin Contracts</a> which has an implementation of ERC721.</p>
+<pre><code>$ npm i --save-dev @openzeppelin/contracts
+</code></pre>
+<p>Next we install a development tool for deployment, for this tutorial we will use <a href="https://www.trufflesuite.com/">Truffle</a> but we could use any other tools such as Buidler, Remix or <a href="https://docs.openzeppelin.com/cli">OpenZeppelin CLI</a>.</p>
+<pre><code>$ npm i truffle
+</code></pre>
+<h2 id="getting-the-contract-artifacts">Getting the Contract Artifacts</h2>
+<p>We will setup our Solidity project using <code>truffle init</code> to create a <code>contracts</code> directory and configuration to connect to a network.</p>
+<pre><code>$ npx truffle init
+Starting init...
+================
+
+&gt; Copying project files to
+
+Init successful, sweet!
+</code></pre>
+<p>We are going to use Preset <a href="https://docs.openzeppelin.com/contracts/3.x/api/presets#ERC721PresetMinterPauserAutoId"><code>ERC721PresetMinterPauserAutoId</code></a> which is an ERC721 that is preset so it can be minted (with auto token ID and metadata URI), paused and burned.</p>
+<p>The Preset contracts have already been compiled, so we only need to copy the artifacts to the <code>build/contracts</code> directory.</p>
+<pre><code>$ mkdir -p build/contracts/
+$ cp node_modules/@openzeppelin/contracts/build/contracts/* build/contracts/
+</code></pre>
+<p>Using your favorite editor create <code>2_deploy.js</code> in the <code>migrations</code> directory with the following contents:</p>
+<pre><code>// migrations/2_deploy.js
+// SPDX-License-Identifier: MIT
+const ERC721PresetMinterPauserAutoId = artifacts.require(&quot;ERC721PresetMinterPauserAutoId&quot;);
+
+module.exports = function(deployer) {
+  deployer.deploy(ERC721PresetMinterPauserAutoId, &quot;My NFT&quot;,&quot;NFT&quot;, &quot;http://my-json-server.typicode.com/huangsuyu/nft/tokens&quot;);
+};
+</code></pre>
+<h2 id="deploy-the-contract-to-a-local-blockchain">Deploy the Contract to a Local Blockchain</h2>
+<p>We will use <a href="https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#develop"><code>truffle develop</code></a> to open a Truffle console with a development blockchain</p>
+<ul>
+<li>Head over to https://faucet.bosagora.org/request/boa/your-address and request test BOA</li>
+</ul>
+<pre><code>$ npx truffle develop
+Truffle Develop started at http://127.0.0.1:9545/
+
+Accounts:
+(0) 0xc7e4bbc4269fdc62f879834e363173aee7895f45
+
+Private Keys:
+(0) ef424b4dc91a9c9d6c1fc4ae0a50ce80668f3a955a7e982584b45577e2c70e27
+
+Mnemonic: mechanic cannon setup general indicate people notable frown poet friend credit true
+
+⚠️  Important ⚠️  : This mnemonic was created for you by Truffle. It is not secure.
+Ensure you do not use it on production blockchains, or else you risk losing funds.
+
+truffle(develop)&gt; migrate
+
+Compiling your contracts...
+===========================
+&gt; Compiling ./contracts/Migrations.sol
+&gt; Artifacts written to /Users/Documents/work/mynft/build/contracts
+&gt; Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
+Starting migrations...
+======================
+&gt; Network name:    'develop'
+&gt; Network id:      5777
+&gt; Block gas limit: 6721975 (0x6691b7)
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   &gt; transaction hash:    0x9a17a50e6efd52ba3e55245c76c52b065d20587add45aee732c233987033e567
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0x77409B688eA5461078a31450F3138EA8324F72C9
+   &gt; block number:        1
+   &gt; block timestamp:     1604387655
+   &gt; account:             0xc7e4bBc4269fdC62F879834E363173aeE7895F45
+   &gt; balance:             99.99616114
+   &gt; gas used:            191943 (0x2edc7)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.00383886 ETH
 
 
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.00383886 ETH
+
+
+2_deploy.js
+===========
+
+   Deploying 'ERC721PresetMinterPauserAutoId'
+   ------------------------------------------
+   &gt; transaction hash:    0xc1a3994c2ad2ba706ac49934b4f480c7b3d9b94241f526afa2dfe91545145a4e
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0xEaB17D581552123695f03F12b09e378EE9463b44
+   &gt; block number:        3
+   &gt; block timestamp:     1604387655
+   &gt; account:             0xc7e4bBc4269fdC62F879834E363173aeE7895F45
+   &gt; balance:             99.92142266
+   &gt; gas used:            3694586 (0x385ffa)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.07389172 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.07389172 ETH
+
+
+Summary
+=======
+&gt; Total deployments:   2
+&gt; Final cost:          0.07773058 ETH
+
+truffle(develop)&gt;
+</code></pre>
+<p>We can deploy our new NFT to our development blockchain using migrate.</p>
+<pre><code>truffle(develop)&gt; migrate
+
+Compiling your contracts...
+===========================
+&gt; Everything is up to date, there is nothing to compile.
+
+
+
+Starting migrations...
+======================
+&gt; Network name:    'develop'
+&gt; Network id:      5777
+&gt; Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   &gt; transaction hash:    0x5d71b0a45a0fe20e2ca645393bb44b83fbd47351c009c48be0b8b84b610fb3b7
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0x3797c825cAC4a1FA765F6D8cd7787fB195849555
+   &gt; block number:        1
+   &gt; block timestamp:     1590736865
+   &gt; account:             0x0445c33BdCe670D57189158b88c0034B579f37cE
+   &gt; balance:             99.99671674
+   &gt; gas used:            164163 (0x28143)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.00328326 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.00328326 ETH
+
+
+2_deploy.js
+===========
+
+   Replacing 'ERC721PresetMinterPauserAutoId'
+   ------------------------------------------
+   &gt; transaction hash:    0x166d7b28f4afb949585b5a0e5b4151daa54acbcb70566b202fd62ab380a6650c
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0xDEE9411430c7Dd9b67fC6DA723DE729AdAB50AD7
+   &gt; block number:        3
+   &gt; block timestamp:     1590736866
+   &gt; account:             0x0445c33BdCe670D57189158b88c0034B579f37cE
+   &gt; balance:             99.92191642
+   &gt; gas used:            3697675 (0x386c0b)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.0739535 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:           0.0739535 ETH
+
+
+Summary
+=======
+&gt; Total deployments:   2
+&gt; Final cost:          0.07723676 ETH
+</code></pre>
+<p>We can then use our deployed contract.</p>
+<pre><code>truffle(develop)&gt; nft = await ERC721PresetMinterPauserAutoId.deployed()
+undefined
+</code></pre>
+<h2 id="interact-with-your-token">Interact With Your Token</h2>
+<p>The accounts that we can use were displayed when we started <code>truffle develop</code></p>
+<h3 id="token-metadata">Token Metadata</h3>
+<p>We can call the contract to read token metadata such as <code>name</code>, <code>symbol</code> and <code>baseURI</code></p>
+<pre><code>truffle(develop)&gt; await nft.name()
+'My NFT'
+truffle(develop)&gt; await nft.symbol()
+'NFT'
+truffle(develop)&gt; await nft.baseURI()
+</code></pre>
+<h3 id="mint">Mint</h3>
+<p>We can send a transaction to mint tokens to a given account, from an account with the minter role.
+In our case we are minting from the account which deployed the token, which is given the minter role.</p>
+<p>We will mint 1 NFT with token ID 0.</p>
+<pre><code>truffle(develop)&gt; await nft.mint(&quot;0x0445c33bdce670d57189158b88c0034b579f37ce&quot;)
+{ tx:
+   '0xd301a60dbb8ac187687f6639f200d4e6f2cfa065923092b3940330e35a26421d',
+  receipt:
+   { transactionHash:
+      '0xd301a60dbb8ac187687f6639f200d4e6f2cfa065923092b3940330e35a26421d',
+     transactionIndex: 0,
+     blockHash:
+      '0x3ad3cfcb26da0c969e9d5a5414a5e90a91a3a862c9e9082afc38a0ec0f1a5d00',
+     blockNumber: 5,
+     from: '0x0445c33bdce670d57189158b88c0034b579f37ce',
+     to: '0xdee9411430c7dd9b67fc6da723de729adab50ad7',
+     gasUsed: 156470,
+...
+</code></pre>
+<p>We can check the owner of the token and the token URI for the metadata</p>
+<pre><code>truffle(develop)&gt; await nft.ownerOf(1)
+'0x0445c33BdCe670D57189158b88c0034B579f37cE'
+truffle(develop)&gt; await nft.tokenURI(1)
+</code></pre>
+<h2 id="metadata">Metadata</h2>
+<p><a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md">EIP-721 2</a> includes an optional <strong>metadata extension</strong> with a <code>name</code>, <code>symbol</code> and for each tokenID a <code>tokenURI</code> with can point to a JSON file with <code>name</code>, <code>description</code> and <code>image</code> for the given token ID.</p>
+<p>How you create and host this metadata is up to you.
+I would suggest using a domain that you control to point to where you host the data so that you can move it as required.</p>
+<p>For this tutorial, we will use <a href="https://my-json-server.typicode.com/">My JSON Server</a> where we can store a single JSON file in a GitHub repository that we can access via a fake JSON server.</p>
+<p><img alt=":warning:" src="https://sjc3.discourse-cdn.com/business6/images/emoji/twitter/warning.png?v=9" /> For production we need to store our metadata in a permanent location that can exist for the life of the token.</p>
+<p>A sample JSON for tokenID 1 is:
+<a href="http://my-json-server.typicode.com/huangsuyu/nft/tokens/1">http://my-json-server.typicode.com/huangsuyu/nft/tokens/1</a></p>
+<h2 id="deploy-to-a-public-testnet">Deploy to a Public Testnet</h2>
+<p>Next we will deploy to BizNet testnet .</p>
+<p>To deploy, we will use the instructions for <a href="https://forum.openzeppelin.com/t/connecting-to-public-test-networks-with-truffle/2960">Connecting to Public Test Networks with Truffle</a></p>
+<p>You will need the following:</p>
+<ul>
+<li>An Infura project ID (or a public node provider of your choice)</li>
+<li><code>@truffle/hdwallet-provider</code> installed</li>
+<li>Configure <code>truffle-config.js</code> for Rinkeby network</li>
+<li>A funded testnet account and mnemonic</li>
+<li>A <code>secrets.json</code> or another secret-management solution. <strong>Make sure you don’t commit this to GitHub!</strong></li>
+</ul>
+<p>My <code>truffle-config.js</code> has the following <code>rinkeby</code> configuration:</p>
+<pre><code>     testnet: {
+      provider: () =&gt; new HDWalletProvider(mnemonic, `https://testnet.bosagora.org`),
+      network_id: 2019,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+    mainnet: {
+      provider: () =&gt; new HDWalletProvider(mnemonic, `https://mainnet.bosagora.org`),
+      network_id: 2151,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+</code></pre>
+<h3 id="deploy-to-biznet-testnet">Deploy to BizNet Testnet</h3>
+<pre><code>$ npx truffle migrate --network testnet
+
+Compiling your contracts...
+===========================
+&gt; Everything is up to date, there is nothing to compile.
+
+Starting migrations...
+======================
+&gt; Network name:    'develop'
+&gt; Network id:      5777
+&gt; Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   &gt; transaction hash:    0x9a17a50e6efd52ba3e55245c76c52b065d20587add45aee732c233987033e567
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0x77409B688eA5461078a31450F3138EA8324F72C9
+   &gt; block number:        1
+   &gt; block timestamp:     1604387655
+   &gt; account:             0xc7e4bBc4269fdC62F879834E363173aeE7895F45
+   &gt; balance:             99.99616114
+   &gt; gas used:            191943 (0x2edc7)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.00383886 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.00383886 ETH
+
+
+2_deploy.js
+===========
+
+   Deploying 'ERC721PresetMinterPauserAutoId'
+   ------------------------------------------
+   &gt; transaction hash:    0xc1a3994c2ad2ba706ac49934b4f480c7b3d9b94241f526afa2dfe91545145a4e
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0xEaB17D581552123695f03F12b09e378EE9463b44
+   &gt; block number:        3
+   &gt; block timestamp:     1604387655
+   &gt; account:             0xc7e4bBc4269fdC62F879834E363173aeE7895F45
+   &gt; balance:             99.92142266
+   &gt; gas used:            3694586 (0x385ffa)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.07389172 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.07389172 ETH
+
+
+Summary
+=======
+&gt; Total deployments:   2
+&gt; Final cost:          0.07773058 ETH
+</code></pre>
+<h3 id="mint_1">Mint</h3>
+<p>We can send a transaction to mint tokens to a given account, from an account with the minter role.</p>
+<pre><code>truffle(develop)&gt; nft = await ERC721PresetMinterPauserAutoId.deployed()
+undefined
+</code></pre>
+<p>In our case we are minting from the account which deployed the token, which is given the minter role.</p>
+<p>To see configured accounts run the command <code>accounts</code>.</p>
+<pre><code>truffle(rinkeby)&gt; accounts
+[ '0x133d144f52705ceb3f5801b63b9ebccf4102f5ed',
+</code></pre>
+<p>We will mint 1 NFT with token ID 1. Specify the address that you want to be the token holder (<code>0xc7e4bBc4269fdC62F879834E363173aeE7895F45</code> is one of my test accounts)</p>
+<pre><code>truffle(rinkeby)&gt; await nft.mint(&quot;0x133d144f52705ceb3f5801b63b9ebccf4102f5ed&quot;)
+{ tx:
+   '0x0d90d4a2a4ac3f33d5220deb11e8f65adf14a6669afd18abd4cce8ca7ab58e04',
+  receipt:
+   { blockHash: '0x724ba66bc1d799820c05a93ae67991b21bb769fd1e9dddd5db9f725f5f633331',
+     blockNumber: 3333746,
+     contractAddress: null,
+     cumulativeGasUsed: 164785,
+     from: '0x77737a65c296012c67f8c7f656d1df81827c9541',
+     gasUsed: 164785,
+...
+</code></pre>
 
               
             </article>
@@ -1001,7 +1566,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.649a939e.min.js"></script>

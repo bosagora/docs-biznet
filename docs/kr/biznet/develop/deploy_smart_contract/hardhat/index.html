@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-hardhat" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -257,9 +262,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../../.." title="BizNet Documentation" class="md-nav__button md-logo" aria-label="BizNet Documentation" data-md-component="logo">
       
@@ -571,25 +574,99 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Hardhat
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Hardhat
       </a>
       
-    </li>
-  
+        
 
-            
-          
-            
-              
+<nav class="md-nav md-nav--secondary" aria-label="목차">
   
   
   
-    <li class="md-nav__item">
-      <a href="../verify/" class="md-nav__link">
-        BOAScan에서 배포된 컨트랙트 검증
-      </a>
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-hardhat" class="md-nav__link">
+    What is Hardhat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-development-environment" class="md-nav__link">
+    Setting up the development environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-project" class="md-nav__link">
+    Create A Project
+  </a>
+  
+    <nav class="md-nav" aria-label="Create A Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-contract" class="md-nav__link">
+    Create Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config-hardhat-for-biznet" class="md-nav__link">
+    Config Hardhat for BizNet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compile-contract" class="md-nav__link">
+    Compile Contract
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-on-biznet-network" class="md-nav__link">
+    Deploying on BizNet Network
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -869,15 +946,237 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-hardhat" class="md-nav__link">
+    What is Hardhat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-development-environment" class="md-nav__link">
+    Setting up the development environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-project" class="md-nav__link">
+    Create A Project
+  </a>
+  
+    <nav class="md-nav" aria-label="Create A Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-contract" class="md-nav__link">
+    Create Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config-hardhat-for-biznet" class="md-nav__link">
+    Config Hardhat for BizNet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compile-contract" class="md-nav__link">
+    Compile Contract
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-on-biznet-network" class="md-nav__link">
+    Deploying on BizNet Network
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-  <h1>Hardhat</h1>
+<h1 id="using-hardhat">Using Hardhat</h1>
+<h2 id="what-is-hardhat">What is Hardhat</h2>
+<p>Hardhat is a development environment to compile, deploy, test, and debug your smart contract.</p>
+<h2 id="setting-up-the-development-environment">Setting up the development environment</h2>
+<p>There are a few technical requirements before we start. Please install the following:
+Requirements:</p>
+<h2 id="installing">Installing</h2>
+<p>There are a few technical requirements before we start. Please install the following:
+Requirements:</p>
+<ul>
+<li>Windows, Linux or Mac OS X</li>
+<li><a href="https://nodejs.org/en/">Node.js v8.9.4 LTS or later</a></li>
+<li><a href="https://git-scm.com/">Git</a></li>
+</ul>
+<p>First, you need to create an empty project <code>npm init --yes</code></p>
+<p>Once your project is ready, you should run</p>
+<pre><code>npm install --save-dev hardhat
+</code></pre>
+<p>It's recommeded to install some dependencies.</p>
+<pre><code>npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+</code></pre>
+<p>To use your local installation of Hardhat, you need to use <code>npx</code> to run it (i.e. <code>npx hardhat</code>).</p>
+<h2 id="create-a-project">Create A Project</h2>
+<p>To create your Hardhat project run npx hardhat in your project folder:</p>
+<pre><code>mkdir MegaCoin
+cd MegaCoin
+</code></pre>
+<ul>
+<li>Intialize your project:</li>
+</ul>
+<pre><code>$ npx hardhat
+888    888                      888 888               888
+888    888                      888 888               888
+888    888                      888 888               888
+8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
+888    888     &quot;88b 888P&quot;  d88&quot; 888 888 &quot;88b     &quot;88b 888
+888    888 .d888888 888    888  888 888  888 .d888888 888
+888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
+888    888 &quot;Y888888 888     &quot;Y88888 888  888 &quot;Y888888  &quot;Y888
 
+Welcome to Hardhat v2.0.8
 
+? What do you want to do? …
+❯ Create a sample project
+  Create an empty hardhat.config.js
+  Quit
+</code></pre>
+<p>Once this project is initialized, you'll now have a project structure with the following items:</p>
+<ul>
+<li>contracts/: Directory for Solidity contracts</li>
+<li>scripts/: Directory for scriptable deployment files</li>
+<li>test/: Directory for test files for testing your application and contracts</li>
+<li>hardhat-config.js: Hardhat configuration file</li>
+</ul>
+<h3 id="create-contract">Create Contract</h3>
+<p>You can write your own smart contract or download the <a href="../../ERC20Token.template">ERC20 token smart contract template</a>.</p>
+<h3 id="config-hardhat-for-biznet">Config Hardhat for BizNet</h3>
+<ul>
+<li>Go to hardhat.config.js</li>
+<li>Update the config</li>
+</ul>
+<pre><code class="language-js">require(&quot;@nomiclabs/hardhat-waffle&quot;);
+require('@nomiclabs/hardhat-ethers');
+const { mnemonic } = require('./secrets.json');
+
+// This is a sample Hardhat task. To learn how to create your own go to
+// https://hardhat.org/guides/create-task.html
+task(&quot;accounts&quot;, &quot;Prints the list of accounts&quot;, async () =&gt; {
+  const accounts = await ethers.getSigners();
+
+  for (const account of accounts) {
+    console.log(account.address);
+  }
+});
+
+// You need to export an object to set up your config
+// Go to https://hardhat.org/config/ to learn more
+
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+module.exports = {
+  defaultNetwork: &quot;mainnet&quot;,
+  networks: {
+    localhost: {
+      url: &quot;http://127.0.0.1:8545&quot;
+    },
+    hardhat: {
+    },
+    testnet: {
+      url: &quot;https://testnet.bosagora.org/&quot;,
+      chainId: 2019,
+      gasPrice: 20000000000,
+      accounts: {mnemonic: mnemonic}
+    },
+    mainnet: {
+      url: &quot;https://mainnet.bosagora.org/&quot;,
+      chainId: 2152,
+      gasPrice: 20000000000,
+      accounts: {mnemonic: mnemonic}
+    }
+  },
+  solidity: {
+  version: &quot;0.5.16&quot;,
+  settings: {
+    optimizer: {
+      enabled: true
+    }
+   }
+  },
+  paths: {
+    sources: &quot;./contracts&quot;,
+    tests: &quot;./test&quot;,
+    cache: &quot;./cache&quot;,
+    artifacts: &quot;./artifacts&quot;
+  },
+  mocha: {
+    timeout: 20000
+  }
+};
+
+</code></pre>
+<p>!!! Note
+It requires mnemonic to be passed in for Provider, this is the seed phrase for the account you'd like to deploy from. Create a new <code>.secret</code> file in root directory and enter your 12 word mnemonic seed phrase to get started. To get the seedwords from metamask wallet you can go to Metamask Settings, then from the menu choose Security and Privacy where you will see a button that says reveal seed words.</p>
+<h3 id="compile-contract">Compile Contract</h3>
+<p>To compile a Hardhat project, change to the root of the directory where the project is located and then type the following into a terminal:</p>
+<pre><code>npx hardhat compile
+</code></pre>
+<h2 id="deploying-on-biznet-network">Deploying on BizNet Network</h2>
+<p>Run this command in root of the project directory:</p>
+<pre><code class="language-js">$  npx hardhat run --network testnet scripts/deploy.js
+</code></pre>
+<blockquote>
+<p>Remember your address, transaction_hash and other details provided would differ, Above is just to provide an idea of structure.</p>
+</blockquote>
+<p><strong>Congratulations!</strong> You have successfully deployed ERC20 Smart Contract. Now you can interact with the Smart Contract.</p>
+<p>You can check the deployment status here: <a href="https://scan.bosagora.org/">https://scan.bosagora.org/</a> or <a href="https://testnet-scan.bosagora.org/">https://testnet-scan.bosagora.org/</a></p>
 
               
             </article>
@@ -912,13 +1211,13 @@
       
       
         
-        <a href="../verify/" class="md-footer__link md-footer__link--next" aria-label="다음: BOAScan에서 배포된 컨트랙트 검증" rel="next">
+        <a href="../../nft/metadata/" class="md-footer__link md-footer__link--next" aria-label="다음: NFT 표준 매타데아타" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 다음
               </span>
-              BOAScan에서 배포된 컨트랙트 검증
+              NFT 표준 매타데아타
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1001,7 +1300,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.649a939e.min.js"></script>

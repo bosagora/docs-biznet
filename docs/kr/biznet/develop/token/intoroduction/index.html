@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#erc20-token-introduction" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -257,9 +262,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../../.." title="BizNet Documentation" class="md-nav__button md-logo" aria-label="BizNet Documentation" data-md-component="logo">
       
@@ -571,20 +574,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../deploy_smart_contract/verify/" class="md-nav__link">
-        BOAScan에서 배포된 컨트랙트 검증
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -693,10 +682,84 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Introduction
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interact-with-contract-with-web3-and-nodejs" class="md-nav__link">
+    Interact with Contract with Web3 and NodeJS.
+  </a>
+  
+    <nav class="md-nav" aria-label="Interact with Contract with Web3 and NodeJS.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-biznets-public-rpc-endpoint" class="md-nav__link">
+    Connect to BizNet's public RPC endpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-wallet" class="md-nav__link">
+    Create a Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recover-a-wallet" class="md-nav__link">
+    Recover a Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-balance" class="md-nav__link">
+    Check Balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-transaction" class="md-nav__link">
+    Create Transaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -869,15 +932,165 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interact-with-contract-with-web3-and-nodejs" class="md-nav__link">
+    Interact with Contract with Web3 and NodeJS.
+  </a>
+  
+    <nav class="md-nav" aria-label="Interact with Contract with Web3 and NodeJS.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-biznets-public-rpc-endpoint" class="md-nav__link">
+    Connect to BizNet's public RPC endpoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-wallet" class="md-nav__link">
+    Create a Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recover-a-wallet" class="md-nav__link">
+    Recover a Wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-balance" class="md-nav__link">
+    Check Balance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-transaction" class="md-nav__link">
+    Create Transaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-  <h1>Introduction</h1>
+<h1 id="erc20-token-introduction">ERC20 Token Introduction</h1>
+<p>A ERC20 token must implement the interface <code>IERC20</code> in <a href="../../IERC20.sol">IERC20.sol</a>. This is a template contract <a href="../../ERC20Token.template">ERC20Token.template</a>. 
+Users just need to fill in <code>_name</code>, <code>_symbol</code>, <code>_decimals</code> and <code>_totalSupply</code> according to their own requirements:</p>
+<pre><code>  constructor() public {
+    _name = {{TOKEN_NAME}};
+    _symbol = {{TOKEN_SYMBOL}};
+    _decimals = {{DECIMALS}};
+    _totalSupply = {{TOTAL_SUPPLY}};
+    _balances[msg.sender] = _totalSupply;
 
+    emit Transfer(address(0), msg.sender, _totalSupply);
+  }
+</code></pre>
+<p>Then users can use <a href="https://remix.ethereum.org">Remix IDE</a> and <a href="../../../wallet/tutorials/metamask/">Metamask</a> to compile and deploy the ERC20 contract to BSC.</p>
+<h2 id="interact-with-contract-with-web3-and-nodejs">Interact with Contract with <a href="https://www.npmjs.com/package/web3">Web3</a> and NodeJS.</h2>
+<h3 id="connect-to-biznets-public-rpc-endpoint">Connect to BizNet's public RPC endpoint</h3>
+<pre><code class="language-js">const Web3 = require('web3');
+// mainnet
+const web3 = new Web3('https://mainnet.bosagora.org');
 
+// testnet
+const web3 = new Web3('https://testnet.bosagora.org');
+</code></pre>
+<h3 id="create-a-wallet">Create a Wallet</h3>
+<pre><code class="language-javascript">web3.eth.accounts.create([entropy]);
+
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-bash">web3.eth.accounts.create();
+{
+  address: '0x926605D0729a968266f1BB299d8Df0471C4F5367',
+  privateKey: '0x6b4618539d95f205f33e916e89404b301dde545c0c4acc181fd0c0b42708bad3',
+  signTransaction: [Function: signTransaction],
+  sign: [Function: sign],
+  encrypt: [Function: encrypt]
+}
+
+</code></pre>
+<h3 id="recover-a-wallet">Recover a Wallet</h3>
+<pre><code class="language-javascript">
+const account = web3.eth.accounts.privateKeyToAccount(&quot;0xe500f5754d761d74c3eb6c2566f4c568b81379bf5ce9c1ecd475d40efe23c577&quot;)
+
+</code></pre>
+<h3 id="check-balance">Check Balance</h3>
+<pre><code class="language-javascript">web3.eth.getBalance(holder).then(console.log);
+
+</code></pre>
+<p>Output:</p>
+<p>The balance will be bumped by e18 for BOA.</p>
+<pre><code>6249621999900000000
+</code></pre>
+<h3 id="create-transaction">Create Transaction</h3>
+<p><strong>Parameters</strong></p>
+<ul>
+<li>Object - The transaction object to send:</li>
+<li>from - String|Number: The address for the sending account. Uses the web3.eth.defaultAccount property, if not specified. Or an address or index of a local wallet in web3.eth.accounts.wallet.</li>
+<li>to - String: (optional) The destination address of the message, left undefined for a contract-creation transaction.</li>
+<li>value - Number|String|BN|BigNumber: (optional) The value transferred for the transaction in wei, also the endowment if it’s a contract-creation transaction.</li>
+<li>gas - Number: (optional, default: To-Be-Determined) The amount of gas to use for the transaction (unused gas is refunded).</li>
+<li>gasPrice - Number|String|BN|BigNumber: (optional) The price of gas for this transaction in wei, defaults to web3.eth.gasPrice.</li>
+<li>data - String: (optional) Either a ABI byte string containing the data of the function call on a contract, or in the case of a contract-creation transaction the initialisation code.</li>
+<li>nonce - Number: (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce.</li>
+</ul>
+<pre><code class="language-Javascript">
+    // // Make a transaction using the promise
+    web3.eth.sendTransaction({
+        from: holder,
+        to: '0x0B75fbeB0BC7CC0e9F9880f78a245046eCBDBB0D',
+        value: '1000000000000000000',
+        gas: 5000000,
+        gasPrice: 18e9,
+    }, function(err, transactionHash) {
+      if (err) {
+        console.log(err);
+        } else {
+        console.log(transactionHash);
+       }
+    });
+</code></pre>
 
               
             </article>
@@ -1001,7 +1214,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.649a939e.min.js"></script>

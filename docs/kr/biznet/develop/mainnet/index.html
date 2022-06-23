@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#biznet" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -257,9 +262,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="BizNet Documentation" class="md-nav__button md-logo" aria-label="BizNet Documentation" data-md-component="logo">
       
@@ -398,10 +401,57 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          BizNet 메인넷
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         BizNet 메인넷
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    메인넷이란?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#biznet_1" class="md-nav__link">
+    BizNet에 연결하는 방법
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#biznet_2" class="md-nav__link">
+    BizNet을 사용하는 방법
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -573,20 +623,6 @@
     <li class="md-nav__item">
       <a href="../deploy_smart_contract/hardhat/" class="md-nav__link">
         Hardhat
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../deploy_smart_contract/verify/" class="md-nav__link">
-        BOAScan에서 배포된 컨트랙트 검증
       </a>
     </li>
   
@@ -867,15 +903,73 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    메인넷이란?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#biznet_1" class="md-nav__link">
+    BizNet에 연결하는 방법
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#biznet_2" class="md-nav__link">
+    BizNet을 사용하는 방법
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-  <h1>BizNet 메인넷</h1>
-
-
+<h1 id="biznet">BizNet 메인넷</h1>
+<h2 id="_1">메인넷이란?</h2>
+<p>메인넷은 블록체인 프로토콜이 완전히 개발·배치되는 시기를 일컫는 용어로, 암호화폐 거래가 분산원장기술(블록체인)에 전달·검증·기록되고 있다는 의미입니다.</p>
+<p>비즈넷의 메인넷은 비즈넷 블록체인에 실제 dApp을 배포하고 실제 거래를 수행하는 데 사용될 수 있습니다.
+이것이 실제 네트워크이기 때문에 네트워크에서 다른 작업을 수행하려면 실제 BOA 토큰을 구입해야 합니다.</p>
+<h2 id="biznet_1">BizNet에 연결하는 방법</h2>
+<p>BizNet의 메인넷에 연결하는 방법은 여러 가지가 있습니다.
+한 가지 가능한 방법은 메인넷의 <a href="../running_node/node/">노드</a>로 참여하는 것입니다.
+지정된 RPC 엔드포인트(rpc.md)을 사용하여 메인넷에 연결할 수도 있습니다.
+RPC 엔드포인트는 HTTP 또는 웹 소켓을 통해 노드와 직접 상호 작용하는 데 사용될 수 있습니다.
+RPC를 사용하여 ABCI 쿼리 실행, 네트워크/합의 상태 보기 또는 트랜잭션 브로드캐스트와 같은 하위 수준 작업을 수행할 수 있습니다.
+RPC 엔드포인트는 다음과 같은 웹 지갑 <a href="../../wallet/tutorials/metamask/">MetaMask</a> 에서 BizNet의 메인넷에 연결하기 위해 사용됩니다.</p>
+<h2 id="biznet_2">BizNet을 사용하는 방법</h2>
+<p>BizNet에서 <a href="../deploy_smart_contract/remix/">스마트컨트랙트</a>를 배포하고, <a href="../nft/metadata/">NFTs</a>, <a href="../token/intoroduction/">ERC20 토큰</a>을 생성할 수 있습니다.</p>
 
               
             </article>
@@ -999,7 +1093,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
       <script src="../../../assets/javascripts/bundle.649a939e.min.js"></script>
