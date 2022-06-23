@@ -33,7 +33,6 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
-    - toc.integrate
 
 # Customization
 extra:
@@ -78,7 +77,6 @@ nav:
                 - Remix IDE: biznet/develop/deploy_smart_contract/remix.md
                 - Truffle: biznet/develop/deploy_smart_contract/truffle.md
                 - Hardhat: biznet/develop/deploy_smart_contract/hardhat.md
-                - BOAScan에서 배포된 컨트랙트 검증: biznet/develop/deploy_smart_contract/verify.md
             - NFT:
                 - NFT 표준 매타데아타: biznet/develop/nft/metadata.md
                 - NFT 배포: biznet/develop/nft/deploy.md
