@@ -1,0 +1,1518 @@
+
+<!doctype html>
+<html lang="kr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="BOSAGORA">
+      
+      
+        <link rel="canonical" href="https://bosagora.github.io/docs-biznet/kr/biznet/develop/nft/deploy/">
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.2">
+    
+    
+      
+        <title>NFT 배포 - BOSAGORA BizNet 문서</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f7951f6f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+
+    
+
+
+
+
+
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#biznet-nft" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="BOSAGORA BizNet 문서" class="md-header__button md-logo" aria-label="BOSAGORA BizNet 문서" data-md-component="logo">
+      
+  <img src="../../../../assets/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BOSAGORA BizNet 문서
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NFT 배포
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="언어설정">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/en/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/kr/" hreflang="kr" class="md-select__link">
+                    한국어
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="지우기" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bosagora/docs-biznet" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bosagora/docs-biznet
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../introduction/" class="md-tabs__link md-tabs__link--active">
+        BizNet
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="BOSAGORA BizNet 문서" class="md-nav__button md-logo" aria-label="BOSAGORA BizNet 문서" data-md-component="logo">
+      
+  <img src="../../../../assets/favicon.ico" alt="logo">
+
+    </a>
+    BOSAGORA BizNet 문서
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bosagora/docs-biznet" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bosagora/docs-biznet
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          BizNet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="BizNet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          BizNet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/" class="md-nav__link">
+        소개
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../consensus/" class="md-nav__link">
+        컨센서스 엔진
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          개발
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="개발" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          개발
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mainnet/" class="md-nav__link">
+        BizNet 메인넷
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testnet/" class="md-nav__link">
+        BizNet 테스트넷
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explorers/" class="md-nav__link">
+        BizNet 블록탐색기
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rpc/" class="md-nav__link">
+        BizNet RPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_5" type="checkbox" id="__nav_2_3_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_5">
+          노드 운영
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="노드 운영" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          노드 운영
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_node/node/" class="md-nav__link">
+        노드를 운영하는 방법
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_node/upgrading/" class="md-nav__link">
+        업그레이드 방법
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_6" type="checkbox" id="__nav_2_3_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_6">
+          스마트컨트랙트 배포
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="스마트컨트랙트 배포" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          스마트컨트랙트 배포
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy_smart_contract/remix/" class="md-nav__link">
+        Remix IDE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy_smart_contract/truffle/" class="md-nav__link">
+        Truffle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy_smart_contract/hardhat/" class="md-nav__link">
+        Hardhat
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_7" type="checkbox" id="__nav_2_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_7">
+          ERC20 토큰
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ERC20 토큰" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          ERC20 토큰
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../token/intoroduction/" class="md-nav__link">
+        토큰 소개
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../token/issue/" class="md-nav__link">
+        토큰 발행하기
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_8" type="checkbox" id="__nav_2_3_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_8">
+          NFT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="NFT" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          NFT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata/" class="md-nav__link">
+        NFT 표준 매타데아타
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          NFT 배포
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        NFT 배포
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    환경 설정
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artifacts" class="md-nav__link">
+    스마트 컨트랙트 Artifacts 가져오기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    로컬 블록체인에 컨트랙트 배포
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    토큰과 상호 작용
+  </a>
+  
+    <nav class="md-nav" aria-label="토큰과 상호 작용">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    토큰 메타데이터
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    민트
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    메타데이터
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    테스넷에 배포하기
+  </a>
+  
+    <nav class="md-nav" aria-label="테스넷에 배포하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biznet" class="md-nav__link">
+    BizNet 테스트넷에 배포
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    민트
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          월렛
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="월렛" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          월렛
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wallet/guide/" class="md-nav__link">
+        가이드
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wallet/key-management/" class="md-nav__link">
+        키관리
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wallet/tutorials/metamask/" class="md-nav__link">
+        메타마스크
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    환경 설정
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artifacts" class="md-nav__link">
+    스마트 컨트랙트 Artifacts 가져오기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    로컬 블록체인에 컨트랙트 배포
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    토큰과 상호 작용
+  </a>
+  
+    <nav class="md-nav" aria-label="토큰과 상호 작용">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    토큰 메타데이터
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    민트
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    메타데이터
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    테스넷에 배포하기
+  </a>
+  
+    <nav class="md-nav" aria-label="테스넷에 배포하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biznet" class="md-nav__link">
+    BizNet 테스트넷에 배포
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    민트
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="biznet-nft"><strong>BizNet에 NFT 배포</strong></h1>
+<blockquote>
+<p>이 문서는 <a href="https://forum.openzeppelin.com/t/draft-create-an-nft-and-deploy-to-a-public-testnet-using-truffle/2961">이 블로그</a>를 참고하여 작성되었습니다.</p>
+</blockquote>
+<p>이 튜토리얼에서는 NFT(Non-Fungible Token)를 생성하고 공개 테스트넷에 배포할 것입니다.</p>
+<p>ERC721은 부동산이나 수집품과 같이 각 토큰이 고유한 <a href="https://docs.openzeppelin.com/contracts/3.x/tokens#different-kinds-of-tokens">대체 불가능한 토큰</a> 의 소유권을 나타내는 표준입니다 .</p>
+<p><a href="https://docs.openzeppelin.com/contracts/3.x/">OpenZeppelin</a> 계약에서 <a href="https://docs.openzeppelin.com/contracts/3.x/api/presets">Presets</a>을 사용 하여 ERC721을 만들고 Truffle을 사용하여 배포합니다.</p>
+<h2 id="_1"><strong>환경 설정</strong></h2>
+<p>우리는 새로운 프로젝트를 만드는 것으로 시작합니다.</p>
+<pre><code>$ mkdir mynft &amp;&amp; cd mynft
+$ npm init -y
+</code></pre>
+<p>그런 다음 ERC721 이 구현된 <a href="https://docs.openzeppelin.com/contracts">OpenZeppelin Contracts</a>를 설치합니다.</p>
+<pre><code>$ npm i --save-dev @openzeppelin/contracts
+</code></pre>
+<p>다음으로 배포용 개발 도구를 설치합니다. 이 자습서에서는 <a href="https://www.trufflesuite.com/">Truffle</a> 하용하지만 Remix 또는 <a href="https://docs.openzeppelin.com/cli">OpenZeppelin CLI</a> 와 같은 다른 도구를 사용할 수도 있습니다 .</p>
+<pre><code>$ npm i truffle
+</code></pre>
+<h2 id="artifacts"><strong>스마트 컨트랙트 Artifacts 가져오기</strong></h2>
+<p>명령어 <code>truffle init</code> 이것을 사용하여 프로젝트를 구성할 것입니다.</p>
+<pre><code>$ npx truffle init
+Starting init...
+================
+
+&gt; Copying project files to
+
+Init successful, sweet!
+</code></pre>
+<p>우리는 Preset <a href="https://docs.openzeppelin.com/contracts/3.x/api/presets#ERC721PresetMinterPauserAutoId"><code>ERC721PresetMinterPauserAutoId</code></a>를 사용할 것입니다.
+이것은 발행, 일시 중지, 소각기능이 포함되어있는 ERC721입니다.
+<code>Preset</code> 계약은 이미 컴파일되었으므로 아티팩트만 build/contracts 디렉터리에 복사하면 됩니다.</p>
+<pre><code>$ mkdir -p build/contracts/
+$ cp node_modules/@openzeppelin/contracts/build/contracts/* build/contracts/
+</code></pre>
+<p><code>migrations</code> 폴더안에 편집기를 사용 하여 다음 내용으로 파일 <code>2_deploy.js</code>를 생성합니다.</p>
+<pre><code>// migrations/2_deploy.js
+// SPDX-License-Identifier: MIT
+const ERC721PresetMinterPauserAutoId = artifacts.require(&quot;ERC721PresetMinterPauserAutoId&quot;);
+
+module.exports = function(deployer) {
+  deployer.deploy(ERC721PresetMinterPauserAutoId, &quot;My NFT&quot;,&quot;NFT&quot;, &quot;http://my-json-server.typicode.com/huangsuyu/nft/tokens&quot;);
+};
+</code></pre>
+<h2 id="_2"><strong>로컬 블록체인에 컨트랙트 배포</strong></h2>
+<p>개발을 위해 <a href="https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#develop"><code>truffle develop</code></a>를 사용합니다.</p>
+<ul>
+<li>다음을 사용하여 테스트넷 BOA를 요청하세요 https://faucet.bosagora.org/request/boa/:your-address</li>
+</ul>
+<pre><code>$ npx truffle develop
+Truffle Develop started at http://127.0.0.1:9545/
+
+Accounts:
+(0) 0xc7e4bbc4269fdc62f879834e363173aee7895f45
+
+Private Keys:
+(0) ef424b4dc91a9c9d6c1fc4ae0a50ce80668f3a955a7e982584b45577e2c70e27
+
+Mnemonic: mechanic cannon setup general indicate people notable frown poet friend credit true
+
+⚠️  Important ⚠️  : This mnemonic was created for you by Truffle. It is not secure.
+Ensure you do not use it on production blockchains, or else you risk losing funds.
+
+truffle(develop)&gt; migrate
+
+Compiling your contracts...
+===========================
+&gt; Compiling ./contracts/Migrations.sol
+&gt; Artifacts written to /Users/Documents/work/mynft/build/contracts
+&gt; Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
+Starting migrations...
+======================
+&gt; Network name:    'develop'
+&gt; Network id:      5777
+&gt; Block gas limit: 6721975 (0x6691b7)
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   &gt; transaction hash:    0x9a17a50e6efd52ba3e55245c76c52b065d20587add45aee732c233987033e567
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0x77409B688eA5461078a31450F3138EA8324F72C9
+   &gt; block number:        1
+   &gt; block timestamp:     1604387655
+   &gt; account:             0xc7e4bBc4269fdC62F879834E363173aeE7895F45
+   &gt; balance:             99.99616114
+   &gt; gas used:            191943 (0x2edc7)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.00383886 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.00383886 ETH
+
+
+2_deploy.js
+===========
+
+   Deploying 'ERC721PresetMinterPauserAutoId'
+   ------------------------------------------
+   &gt; transaction hash:    0xc1a3994c2ad2ba706ac49934b4f480c7b3d9b94241f526afa2dfe91545145a4e
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0xEaB17D581552123695f03F12b09e378EE9463b44
+   &gt; block number:        3
+   &gt; block timestamp:     1604387655
+   &gt; account:             0xc7e4bBc4269fdC62F879834E363173aeE7895F45
+   &gt; balance:             99.92142266
+   &gt; gas used:            3694586 (0x385ffa)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.07389172 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.07389172 ETH
+
+
+Summary
+=======
+&gt; Total deployments:   2
+&gt; Final cost:          0.07773058 ETH
+
+truffle(develop)&gt;
+</code></pre>
+<p>마이그레이션을 사용하여 새로운 NFT를 개발 블록체인에 배포할 수 있습니다.</p>
+<pre><code>truffle(develop)&gt; migrate
+
+Compiling your contracts...
+===========================
+&gt; Everything is up to date, there is nothing to compile.
+
+
+
+Starting migrations...
+======================
+&gt; Network name:    'develop'
+&gt; Network id:      5777
+&gt; Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   &gt; transaction hash:    0x5d71b0a45a0fe20e2ca645393bb44b83fbd47351c009c48be0b8b84b610fb3b7
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0x3797c825cAC4a1FA765F6D8cd7787fB195849555
+   &gt; block number:        1
+   &gt; block timestamp:     1590736865
+   &gt; account:             0x0445c33BdCe670D57189158b88c0034B579f37cE
+   &gt; balance:             99.99671674
+   &gt; gas used:            164163 (0x28143)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.00328326 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.00328326 ETH
+
+
+2_deploy.js
+===========
+
+   Replacing 'ERC721PresetMinterPauserAutoId'
+   ------------------------------------------
+   &gt; transaction hash:    0x166d7b28f4afb949585b5a0e5b4151daa54acbcb70566b202fd62ab380a6650c
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0xDEE9411430c7Dd9b67fC6DA723DE729AdAB50AD7
+   &gt; block number:        3
+   &gt; block timestamp:     1590736866
+   &gt; account:             0x0445c33BdCe670D57189158b88c0034B579f37cE
+   &gt; balance:             99.92191642
+   &gt; gas used:            3697675 (0x386c0b)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.0739535 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:           0.0739535 ETH
+
+
+Summary
+=======
+&gt; Total deployments:   2
+&gt; Final cost:          0.07723676 ETH
+</code></pre>
+<p>그런 다음 배포된 계약을 사용할 수 있습니다.</p>
+<pre><code>truffle(develop)&gt; nft = await ERC721PresetMinterPauserAutoId.deployed()
+undefined
+</code></pre>
+<h2 id="_3"><strong>토큰과 상호 작용</strong></h2>
+<p><code>truffle develop</code>를 시작할 때 사용할 수 있는 계정이 표시되었습니다 </p>
+<h3 id="_4">토큰 메타데이터</h3>
+<p><code>name</code>, <code>symbol</code>, <code>baseURI</code> 와 같은 토큰 메타데이터를 읽기 위해 계약을 호출할 수 있습니다</p>
+<pre><code>truffle(develop)&gt; await nft.name()
+'My NFT'
+truffle(develop)&gt; await nft.symbol()
+'NFT'
+truffle(develop)&gt; await nft.baseURI()
+</code></pre>
+<h3 id="_5">민트</h3>
+<p>발행자 역할이 있는 계정에서 지정된 계정으로 토큰을 발행하는 트랜잭션을 보낼 수 있습니다. 우리의 경우 발행자 역할이 부여된 토큰을 배포한 계정에서 발행합니다.</p>
+<p>토큰 ID가 0인 NFT 1개를 발행합니다.</p>
+<pre><code>truffle(develop)&gt; await nft.mint(&quot;0x0445c33bdce670d57189158b88c0034b579f37ce&quot;)
+{ tx:
+   '0xd301a60dbb8ac187687f6639f200d4e6f2cfa065923092b3940330e35a26421d',
+  receipt:
+   { transactionHash:
+      '0xd301a60dbb8ac187687f6639f200d4e6f2cfa065923092b3940330e35a26421d',
+     transactionIndex: 0,
+     blockHash:
+      '0x3ad3cfcb26da0c969e9d5a5414a5e90a91a3a862c9e9082afc38a0ec0f1a5d00',
+     blockNumber: 5,
+     from: '0x0445c33bdce670d57189158b88c0034b579f37ce',
+     to: '0xdee9411430c7dd9b67fc6da723de729adab50ad7',
+     gasUsed: 156470,
+...
+</code></pre>
+<p>토큰의 소유자와 메타데이터에 대한 토큰 URI를 확인할 수 있습니다.</p>
+<pre><code>truffle(develop)&gt; await nft.ownerOf(1)
+'0x0445c33BdCe670D57189158b88c0034B579f37cE'
+truffle(develop)&gt; await nft.tokenURI(1)
+</code></pre>
+<h2 id="_6"><strong>메타데이터</strong></h2>
+<p><a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md">EIP-721 2</a>
+에는 가 포함된 선택적 메타데이터 확장 이 포함되어 있으며 name, symbol각 tokenID에 대해 a는 가 포함 tokenURI된 JSON 파일을 가리킬 수 있으며 , name주어진 토큰 ID에 대해서는 가 있습니다.descriptionimage</p>
+<p>includes an optional <strong>metadata extension</strong> with a <code>name</code>, <code>symbol</code> and for each tokenID a <code>tokenURI</code> with can point to a JSON file with <code>name</code>, <code>description</code> and <code>image</code> for the given token ID.</p>
+<p>이 메타데이터를 만들고 호스팅하는 방법은 사용자에게 달려 있습니다. 
+필요에 따라 이동할 수 있도록 데이터를 호스팅하는 위치를 가리키도록 제어하는 도메인을 사용하는 것이 좋습니다.</p>
+<p>이 자습서에서는 가짜 JSON 서버를 통해 액세스할 수 있는 GitHub 리포지토리에 단일 JSON 파일을 저장할 수 있는 <a href="https://my-json-server.typicode.com/">My JSON Server</a> 를 사용합니다.</p>
+<p><strong>경고</strong> 프로덕션을 위해 토큰 수명 동안 존재할 수 있는 영구 위치에 메타데이터를 저장해야 합니다.</p>
+<p>A sample JSON for tokenID 1 is:
+<a href="http://my-json-server.typicode.com/huangsuyu/nft/tokens/1">http://my-json-server.typicode.com/huangsuyu/nft/tokens/1</a></p>
+<h2 id="_7"><strong>테스넷에 배포하기</strong></h2>
+<p>다음으로 우리는 BizNet testnet에 배포할 것입니다.
+배포하기 위해 Truffle을 사용하여 <a href="https://forum.openzeppelin.com/t/connecting-to-public-test-networks-with-truffle/2960">공개 테스트 네트워크에 연결하기 위한 지침</a>을 사용합니다.</p>
+<p>다음이 필요합니다.</p>
+<ul>
+<li>테스트넷의 RPC URL</li>
+<li><code>@truffle/hdwallet-provider</code> installed</li>
+<li><code>truffle-config.js</code>를 테스트넷용으로 설정하기</li>
+<li>자금 지원 테스트넷 계정 및 니모닉</li>
+<li><code>secrets.json</code> 또는 다른 비밀 관리 솔루션입니다. <strong>이것을 GitHub에 커밋하지 않았는지 확인하십시오!</strong></li>
+</ul>
+<p><code>truffle-config.js</code>는 다음과 같습니다.</p>
+<pre><code>     testnet: {
+      provider: () =&gt; new HDWalletProvider(mnemonic, `https://testnet.bosagora.org`),
+      network_id: 2019,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+    mainnet: {
+      provider: () =&gt; new HDWalletProvider(mnemonic, `https://mainnet.bosagora.org`),
+      network_id: 2151,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+</code></pre>
+<h3 id="biznet">BizNet 테스트넷에 배포</h3>
+<pre><code>$ npx truffle migrate --network testnet
+
+Compiling your contracts...
+===========================
+&gt; Everything is up to date, there is nothing to compile.
+
+Starting migrations...
+======================
+&gt; Network name:    'develop'
+&gt; Network id:      5777
+&gt; Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   &gt; transaction hash:    0x9a17a50e6efd52ba3e55245c76c52b065d20587add45aee732c233987033e567
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0x77409B688eA5461078a31450F3138EA8324F72C9
+   &gt; block number:        1
+   &gt; block timestamp:     1604387655
+   &gt; account:             0xc7e4bBc4269fdC62F879834E363173aeE7895F45
+   &gt; balance:             99.99616114
+   &gt; gas used:            191943 (0x2edc7)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.00383886 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.00383886 ETH
+
+
+2_deploy.js
+===========
+
+   Deploying 'ERC721PresetMinterPauserAutoId'
+   ------------------------------------------
+   &gt; transaction hash:    0xc1a3994c2ad2ba706ac49934b4f480c7b3d9b94241f526afa2dfe91545145a4e
+   &gt; Blocks: 0            Seconds: 0
+   &gt; contract address:    0xEaB17D581552123695f03F12b09e378EE9463b44
+   &gt; block number:        3
+   &gt; block timestamp:     1604387655
+   &gt; account:             0xc7e4bBc4269fdC62F879834E363173aeE7895F45
+   &gt; balance:             99.92142266
+   &gt; gas used:            3694586 (0x385ffa)
+   &gt; gas price:           20 gwei
+   &gt; value sent:          0 ETH
+   &gt; total cost:          0.07389172 ETH
+
+
+   &gt; Saving migration to chain.
+   &gt; Saving artifacts
+   -------------------------------------
+   &gt; Total cost:          0.07389172 ETH
+
+
+Summary
+=======
+&gt; Total deployments:   2
+&gt; Final cost:          0.07773058 ETH
+</code></pre>
+<h3 id="_8">민트</h3>
+<p>발행자 역할이 있는 계정에서 지정된 계정으로 토큰을 발행하는 트랜잭션을 보낼 수 있습니다.</p>
+<pre><code>truffle(develop)&gt; nft = await ERC721PresetMinterPauserAutoId.deployed()
+undefined
+</code></pre>
+<p>우리의 경우 발행자 역할이 부여된 토큰을 배포한 계정에서 발행합니다.
+구성된 계정을 보려면 명령 <code>accounts</code> 을 실행하십시오</p>
+<pre><code>truffle(rinkeby)&gt; accounts
+[ '0x133d144f52705ceb3f5801b63b9ebccf4102f5ed',
+</code></pre>
+<p>토큰 ID가 1인 NFT 1개를 발행합니다. 토큰 보유자가 될 주소를 지정합니다 ("0xc7e4bBc4269fdC62F879834E363173aeE7895F45")내 테스트 계정 중 하나임.</p>
+<pre><code>truffle(rinkeby)&gt; await nft.mint(&quot;0x133d144f52705ceb3f5801b63b9ebccf4102f5ed&quot;)
+{ tx:
+   '0x0d90d4a2a4ac3f33d5220deb11e8f65adf14a6669afd18abd4cce8ca7ab58e04',
+  receipt:
+   { blockHash: '0x724ba66bc1d799820c05a93ae67991b21bb769fd1e9dddd5db9f725f5f633331',
+     blockNumber: 3333746,
+     contractAddress: null,
+     cumulativeGasUsed: 164785,
+     from: '0x77737a65c296012c67f8c7f656d1df81827c9541',
+     gasUsed: 164785,
+...
+</code></pre>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            맨위로
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../metadata/" class="md-footer__link md-footer__link--prev" aria-label="이전: NFT 표준 매타데아타" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              NFT 표준 매타데아타
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../wallet/guide/" class="md-footer__link md-footer__link--next" aria-label="다음: 가이드" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              가이드
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 BOSAGORA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/bosagora1" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://facebook.com/BOSAGORA" target="_blank" rel="noopener" title="facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://medium.com/bosagora" target="_blank" rel="noopener" title="medium.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 32v448h448V32H0zm372.2 106.1-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UCjcTwkskyTmAwHpqv9Oynig" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/bosagora" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version.title": "\ubc84\uc804 \uc120\ud0dd"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.649a939e.min.js"></script>
+      
+    
+  </body>
+</html>
