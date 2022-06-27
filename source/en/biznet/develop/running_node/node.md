@@ -87,7 +87,7 @@ This is being prepared.
 
 1.Build from source code
 
-Make sure that you have installed [Go 1.13+](https://golang.org/doc/install) and have added `GOPATH` to `PATH` environment variable
+Make sure that you have installed [Go 1.18+](https://golang.org/doc/install) and have added `GOPATH` to `PATH` environment variable
 
 ```bash
 git clone https://github.com/bosagora/go-ethereum

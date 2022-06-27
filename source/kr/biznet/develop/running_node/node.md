@@ -86,7 +86,7 @@ Geth는 피어 제한에 도달한 경우에도 항상 다시 연결할 수 있�
 
 1.소스 코드로 빌드
 
-[Go 1.13+](https://golang.org/doc/install)를 설치하고, `PATH`에 `GOPATH`를 추가했는지 확인하십시오
+[Go 1.18+](https://golang.org/doc/install)를 설치하고, `PATH`에 `GOPATH`를 추가했는지 확인하십시오
 
 ```bash
 git clone https://github.com/bosagora/go-ethereum
