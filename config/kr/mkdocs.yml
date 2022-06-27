@@ -38,10 +38,10 @@ theme:
 extra:
   alternate:
     - name: English
-      link: /en/
+      link: /docs-biznet/en/
       lang: en
     - name: 한국어
-      link: /kr/
+      link: /docs-biznet/kr/
       lang: kr
   social:
     - icon: fontawesome/brands/twitter
