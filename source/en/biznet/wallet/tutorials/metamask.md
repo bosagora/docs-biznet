@@ -11,7 +11,7 @@ It’s supported in Chrome, and Safari browsers.
 
 **Example: Install MetaMask in Chrome browser**
 
-* Open Extension Category in Chrome: https://chrome.google.com/webstore/category/extensionsSearch for MetaMask
+* Chrome Webstore MetaMask : [https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
 
 ![img](assets/metamask01.png)
 
@@ -39,6 +39,7 @@ The workflow is the same for all browsers
 
 3.Click on "Create" and then write down your backup phrase.
 
+* Please use paper and pen to fill it out and store it in a separate space.
 ![img](assets/metamask05.png)
 
 4.Select each phrase in order to make sure it is correct then click "Confirm".
@@ -50,6 +51,8 @@ Congratulations! you have creat your MetaMask account!
 ## Connect Your MetaMask With BizNet
 
 1.Go to setting page
+
+* Alternatively, click the Select Network button marked "Ethereum Mainnet".
 
 ![img](assets/metamask07.png)
 

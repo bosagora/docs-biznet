@@ -13,7 +13,7 @@
 
 **예: Chrome 브라우저에 MetaMask 설치**
 
-* 크롬브라우즈에서 확장프로그램 카테고리 열기: https://chrome.google.com/webstore/category/extensionsSearch
+* Chrome 웹 스토어 MetaMask: [https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
 
 ![img](assets/metamask01.png)
 
@@ -41,6 +41,7 @@
 
 3.비밀 복구 구문을 백업한 후 "다음" 버튼을 클릭합니다.
 
+* 비밀 복구 구문 백업 방법중에 종이 와 펜을 이용해서 작성후 별도의 공간에 잘 보관 하시길 바랍니다.  
 ![img](assets/metamask05.png)
 
 4.각 구문을 선택하여 올바른지 확인한 후 "확인"을 클릭합니다.
@@ -52,6 +53,8 @@
 ## **BizNet에 연결하는 방법**
 
 1."설정" 페이지로 이동합니다.
+
+* 또는 "이더리움 메인넷"으로 표시 되어있는 네트워크 선택 버튼을 클릭 합니다.
 
 ![img](assets/metamask07.png)
 
