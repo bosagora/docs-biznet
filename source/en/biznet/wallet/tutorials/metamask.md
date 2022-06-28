@@ -57,17 +57,17 @@ Congratulations! you have creat your MetaMask account!
 
 ![img](assets/metamask08.png)
 
-* Testnet
-      * [RPC URLs](./../../develop/rpc.md)
-      * ChainID: 0x7E3 (2019 in decimal)
-      * Symbol: BOA
-      * [Block Explorer](https://testnet-scan.bosagora.org)
-
 * Mainnet
-      * [RPC URLs](./../../develop/rpc.md)
-      * ChainID: 0x867 (2151 in decimal)
+      * [RPC URLs](./../../develop/rpc.md): https://mainnet.bosagora.org
+      * ChainID: 2151 (0x867)
       * Symbol: BOA
-      * [Block Explorer](https://scan.bosagora.org)
+      * [Block Explorer](https://scan.bosagora.org): https://scan.bosagora.org
+
+* Testnet
+      * [RPC URLs](./../../develop/rpc.md): https://testnet.bosagora.org
+      * ChainID: 2019 (0x7E3)
+      * Symbol: BOA
+      * [Block Explorer](https://testnet-scan.bosagora.org): https://testnet-scan.bosagora.org 
 
 ![img](assets/metamask09.png)
 

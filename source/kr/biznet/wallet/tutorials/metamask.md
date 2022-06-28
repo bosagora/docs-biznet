@@ -59,17 +59,17 @@
 
 ![img](assets/metamask08.png)
 
-* 테스트넷
-      * [RPC URL](./../../develop/rpc.md)
-      * 체인 ID: 0x7E3 (2019 in decimal)
+* 메인넷
+      * [RPC URL](./../../develop/rpc.md): https://mainnet.bosagora.org  
+      * 체인 ID: 2151 (0x867)
       * 통화기호: BOA
-      * [블록탐색기 URL](https://testnet-scan.bosagora.org)
+      * [블록탐색기 URL](https://scan.bosagora.org): https://scan.bosagora.org
 
-* Mainnet
-      * [RPC URL](./../../develop/rpc.md)
-      * 체인 ID: 0x867 (2151 in decimal)
+* 테스트넷
+      * [RPC URL](./../../develop/rpc.md): https://testnet.bosagora.org
+      * 체인 ID: 2019 (0x7E3)
       * 통화기호: BOA
-      * [블록탐색기 URL](https://scan.bosagora.org)
+      * [블록탐색기 URL](https://testnet-scan.bosagora.org): https://testnet-scan.bosagora.org
 
 ![img](assets/metamask09.png)
 
