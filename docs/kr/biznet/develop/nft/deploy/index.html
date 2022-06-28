@@ -1262,9 +1262,8 @@ truffle(develop)&gt; await nft.baseURI()
 truffle(develop)&gt; await nft.tokenURI(1)
 </code></pre>
 <h2 id="_6"><strong>메타데이터</strong></h2>
-<p><a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md">EIP-721 2</a>
-에는 가 포함된 선택적 메타데이터 확장 이 포함되어 있으며 name, symbol각 tokenID에 대해 a는 가 포함 tokenURI된 JSON 파일을 가리킬 수 있으며 , name주어진 토큰 ID에 대해서는 가 있습니다.descriptionimage</p>
-<p>includes an optional <strong>metadata extension</strong> with a <code>name</code>, <code>symbol</code> and for each tokenID a <code>tokenURI</code> with can point to a JSON file with <code>name</code>, <code>description</code> and <code>image</code> for the given token ID.</p>
+<p><a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md">EIP-721</a>
+각 tokenID에 대하여 name, symbol, tokenURI가 포함된 메타데이터 확장이 있으며 tokenURI는  name, description, image 가 포함된 JSON 파일을 가리킵니다.</p>
 <p>이 메타데이터를 만들고 호스팅하는 방법은 사용자에게 달려 있습니다. 
 필요에 따라 이동할 수 있도록 데이터를 호스팅하는 위치를 가리키도록 제어하는 도메인을 사용하는 것이 좋습니다.</p>
 <p>이 자습서에서는 가짜 JSON 서버를 통해 액세스할 수 있는 GitHub 리포지토리에 단일 JSON 파일을 저장할 수 있는 <a href="https://my-json-server.typicode.com/">My JSON Server</a> 를 사용합니다.</p>
