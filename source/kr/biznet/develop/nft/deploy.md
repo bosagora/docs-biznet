@@ -285,10 +285,8 @@ truffle(develop)> await nft.tokenURI(1)
 
 ## **메타데이터**
 
-[EIP-721 2](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md)
-에는 가 포함된 선택적 메타데이터 확장 이 포함되어 있으며 name, symbol각 tokenID에 대해 a는 가 포함 tokenURI된 JSON 파일을 가리킬 수 있으며 , name주어진 토큰 ID에 대해서는 가 있습니다.descriptionimage
-
-includes an optional **metadata extension** with a `name`, `symbol` and for each tokenID a `tokenURI` with can point to a JSON file with `name`, `description` and `image` for the given token ID.
+[EIP-721](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md)
+각 tokenID에 대하여 name, symbol, tokenURI가 포함된 메타데이터 확장이 있으며 tokenURI는  name, description, image 가 포함된 JSON 파일을 가리킵니다.
 
 이 메타데이터를 만들고 호스팅하는 방법은 사용자에게 달려 있습니다. 
 필요에 따라 이동할 수 있도록 데이터를 호스팅하는 위치를 가리키도록 제어하는 도메인을 사용하는 것이 좋습니다.
