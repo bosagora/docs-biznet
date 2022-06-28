@@ -6,14 +6,14 @@
 
 RPC 엔드포인트:
 
-* https://mainnet.bosagora.org/
+* https://mainnet.bosagora.org
 
 
 ### BizNet 테스트넷 (체인 ID 0x7E3, 10진수로 2019)
 
 RPC 엔드포인트:
 
-* https://testnet.bosagora.org/
+* https://testnet.bosagora.org
 
 
 ## **JSON-RPC 함수들**
