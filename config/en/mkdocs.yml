@@ -59,6 +59,9 @@ plugins:
   - search:
       lang: en
 
+markdown_extensions:
+  - attr_list
+
 # Page tree
 nav:
     - Home: index.md
