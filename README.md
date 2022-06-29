@@ -2,6 +2,9 @@
 
 BizNet documentation
 
+## Installation of MKDocs
+https://www.mkdocs.org/user-guide/installation/#installing-mkdocs
+
 ## Build English Documentation
 ```shell
 python -m mkdocs build -f config/en/mkdocs.yml
