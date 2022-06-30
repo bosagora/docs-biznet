@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://bosagora.github.io/docs-biznet/en/biznet/develop/deploy_smart_contract/remix/">
       
       <link rel="icon" href="../../../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -575,18 +575,19 @@
     Writing the Smart Contract
   </a>
   
-    <nav class="md-nav" aria-label="Writing the Smart Contract">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#compile-smart-contract" class="md-nav__link">
     Compile Smart Contract
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-smart-contract" class="md-nav__link">
+    Deploy Smart Contract
+  </a>
   
 </li>
       
@@ -884,18 +885,19 @@
     Writing the Smart Contract
   </a>
   
-    <nav class="md-nav" aria-label="Writing the Smart Contract">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#compile-smart-contract" class="md-nav__link">
     Compile Smart Contract
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-smart-contract" class="md-nav__link">
+    Deploy Smart Contract
+  </a>
   
 </li>
       
@@ -921,8 +923,8 @@ This tutorial is intended to be followed using the online IDE available at <a hr
 <ul>
 <li>Remix is an online IDE to develop smart contracts.</li>
 <li>You need to choose Solidity Compiler and Deploy and Run Transactions.</li>
-<li>Go to File Explorers, And Create a new file, Name it MegaCoin.sol</li>
-<li>Copy/Paste the Smart contract below into the newly created file <code>MegaCoin.sol</code></li>
+<li>Go to File Explorers, And Create a new file, Name it ERC20Token.sol</li>
+<li>Copy/Paste the Smart contract below into the newly created file <code>ERC20Token.sol</code></li>
 </ul>
 <h2 id="writing-the-smart-contract">Writing the Smart Contract</h2>
 <ul>
@@ -930,12 +932,13 @@ This tutorial is intended to be followed using the online IDE available at <a hr
 <p>Create new contract ERC20Token.sol and copy contract code from the ERC20 token template <a href="../../ERC20Token.template">here</a></p>
 </li>
 <li>
-<p>Modify "name", "symbol", "decimals" and "totalSupply" according to your requirements.</p>
+<p>Modify "TOKEN_NAME", "TOKEN_SYMBOL", "DECIMALS" and "TOTAL_SUPPLY" according to your requirements.</p>
 </li>
 </ul>
+<p><img alt="img" src="../assets/remix_01.png" style="width:80%;border:solid 1px;margin-left:30px" /></p>
 <p>The first line, <code>pragma solidity ^0.8.0</code> specifies that the source code is for a Solidity version greater than 0.5.16. <a href="https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#pragma">Pragmas</a> are common instructions for compilers about how to treat the source code (e.g., pragma once).</p>
 <p>A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. Learn more about the <a href="https://solidity.readthedocs.io/en/latest/contracts.html#constructor">constructor</a> and  <a href="https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack">memory</a> in the docs.</p>
-<h3 id="compile-smart-contract">Compile Smart Contract</h3>
+<h2 id="compile-smart-contract">Compile Smart Contract</h2>
 <ul>
 <li>
 <p>Step1: Click button to switch to compile page</p>
@@ -950,36 +953,10 @@ This tutorial is intended to be followed using the online IDE available at <a hr
 <p>Step4: Click "ABI" to copy the contract abi and save it.</p>
 </li>
 </ul>
+<h2 id="deploy-smart-contract">Deploy Smart Contract</h2>
 <p>Now, We have to deploy our smart contract on BizNet Network. For that, we have to connect to web3 world, 
 We will be using Metamask. Please follow this <a href="../../../wallet/tutorials/metamask/">tutorial to setup a Metamask Account</a>.</p>
 <ul>
-<li>
-<p>Go to setting page</p>
-</li>
-<li>
-<p>Add a new network</p>
-</li>
-<li>
-<p>Testnet</p>
-<ul>
-<li><a href="../../rpc/">RPC URLs</a></li>
-<li>ChainID: 2019</li>
-<li>Symbol: BOA</li>
-<li>Block Explorer: https://testnet-scan.bosagora.org </li>
-</ul>
-</li>
-<li>
-<p>Mainnet</p>
-<ul>
-<li><a href="../../rpc/">RPC URLs</a></li>
-<li>ChainID: 2151</li>
-<li>Symbol: BOA</li>
-<li>Block Explorer: https://scan.bosagora.org/</li>
-</ul>
-</li>
-<li>
-<p>Go ahead and click save</p>
-</li>
 <li>
 <p>Copy your address from Metamask</p>
 </li>
@@ -990,14 +967,20 @@ We will be using Metamask. Please follow this <a href="../../../wallet/tutorials
 <p>Now, let's Deploy the Smart Contract on BizNet Testnet</p>
 </li>
 <li>
-<p>Select Injected Web3 in the Environment dropdown and your contract</p>
+<p>Select "Injected Web3" in the ENVIRONMENT dropdown and your contract</p>
 </li>
-<li>
-<p>Accept the Connection Request!</p>
-</li>
-<li>
-<p>Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.</p>
-</li>
+</ul>
+<p><img alt="img" src="../assets/remix_02.png" style="min-width:350px;width:50%;border:solid 1px;margin:-10px 0 0 30px" /></p>
+<ul>
+<li>Metamask accept the Connection Request!</li>
+</ul>
+<p><img alt="img" src="../assets/remix_04.png" style="height:300px;border:solid 1px;margin-left:30px;margin-top:-10px" /><img alt="img" src="../assets/remix_05.png" style="height:300px;border:solid 1px;margin-top:-10px" /></p>
+<ul>
+<li>From the CONTRACT dropdown menu, select the ERC20Token.sol you created earlier.</li>
+</ul>
+<p><img alt="img" src="../assets/remix_03.png" style="min-width:350px;width:50%;border:solid 1px;margin-left:30px;margin-top:-10px" /></p>
+<ul>
+<li>Click the Deploy button in Remix and accept another metamask popup that requires transaction confirmation once connected!</li>
 </ul>
 <p><strong>Congratulations!</strong> You have successfully deployed a ERC20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: <a href="https://testnet-scan.bosagora.org/">https://testnet-scan.bosagora.org/</a></p>
 

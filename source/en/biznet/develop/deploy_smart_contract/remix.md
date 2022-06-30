@@ -9,21 +9,22 @@ This tutorial is intended to be followed using the online IDE available at [Remi
 
 - Remix is an online IDE to develop smart contracts.
 - You need to choose Solidity Compiler and Deploy and Run Transactions.
-- Go to File Explorers, And Create a new file, Name it MegaCoin.sol
-- Copy/Paste the Smart contract below into the newly created file `MegaCoin.sol`
+- Go to File Explorers, And Create a new file, Name it ERC20Token.sol
+- Copy/Paste the Smart contract below into the newly created file `ERC20Token.sol`
 
 ## Writing the Smart Contract
 
 - Create new contract ERC20Token.sol and copy contract code from the ERC20 token template [here](../ERC20Token.template)
 
-- Modify "name", "symbol", "decimals" and "totalSupply" according to your requirements.
+- Modify "TOKEN_NAME", "TOKEN_SYMBOL", "DECIMALS" and "TOTAL_SUPPLY" according to your requirements.
 
+![img](assets/remix_01.png){style="width:80%;border:solid 1px;margin-left:30px"}
 
 The first line, `pragma solidity ^0.8.0` specifies that the source code is for a Solidity version greater than 0.5.16. [Pragmas](https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#pragma) are common instructions for compilers about how to treat the source code (e.g., pragma once).
 
 A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. Learn more about the [constructor](https://solidity.readthedocs.io/en/latest/contracts.html#constructor) and  [memory](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html#storage-memory-and-the-stack) in the docs.
 
-### Compile Smart Contract
+## Compile Smart Contract
 
 - Step1: Click button to switch to compile page
 
@@ -33,38 +34,30 @@ A contract in the sense of Solidity is a collection of code (its functions) and 
 
 -  Step4: Click "ABI" to copy the contract abi and save it.
 
+## Deploy Smart Contract
 
 Now, We have to deploy our smart contract on BizNet Network. For that, we have to connect to web3 world, 
 We will be using Metamask. Please follow this [tutorial to setup a Metamask Account](../../wallet/tutorials/metamask.md).
-
-- Go to setting page
-
-- Add a new network
-
-* Testnet
-      * [RPC URLs](../rpc.md)
-      * ChainID: 2019
-      * Symbol: BOA
-      * Block Explorer: https://testnet-scan.bosagora.org 
-
-* Mainnet
-      * [RPC URLs](../rpc.md)
-      * ChainID: 2151
-      * Symbol: BOA
-      * Block Explorer: https://scan.bosagora.org/
-
-- Go ahead and click save
 
 - Copy your address from Metamask
 
 - Head over to Faucet - https://faucet.bosagora.org/request/boa/your-address and request test BOA
 
 - Now, let's Deploy the Smart Contract on BizNet Testnet
-- Select Injected Web3 in the Environment dropdown and your contract
+ 
+- Select "Injected Web3" in the ENVIRONMENT dropdown and your contract
 
-- Accept the Connection Request!
+![img](assets/remix_02.png){style="min-width:350px;width:50%;border:solid 1px;margin:-10px 0 0 30px"}
 
-- Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
+- Metamask accept the Connection Request!
+
+![img](assets/remix_04.png){style="height:300px;border:solid 1px;margin-left:30px;margin-top:-10px"}![img](assets/remix_05.png){style="height:300px;border:solid 1px;margin-top:-10px"}
+
+- From the CONTRACT dropdown menu, select the ERC20Token.sol you created earlier.
+
+![img](assets/remix_03.png){style="min-width:350px;width:50%;border:solid 1px;margin-left:30px;margin-top:-10px"}
+
+- Click the Deploy button in Remix and accept another metamask popup that requires transaction confirmation once connected!
 
 **Congratulations!** You have successfully deployed a ERC20 Contract. Now you can interact with the Smart Contract. Check the deployment status here: <https://testnet-scan.bosagora.org/>
 
