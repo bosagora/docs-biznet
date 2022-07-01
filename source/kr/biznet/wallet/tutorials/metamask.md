@@ -37,7 +37,7 @@
 
 2.8자 이상의 암호를 기록하고, 이용약관에 동의한 후, "생성" 버튼을 클릭합니다.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask04.png" alt="img" width="50%">
+![img](assets/metamask04.png){style="min-width:350px;width:50%"}
 
 3.비밀 복구 구문을 백업한 후 "다음" 버튼을 클릭합니다.
 
@@ -82,35 +82,35 @@
 
 2."보내기" 버튼을 클릭합니다.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask11.png" alt="img" width="50%">
+![img](assets/metamask11.png){style="min-width:350px;width:50%"}
 
 3.수신자의 주소를 입력합니다.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask12.png" alt="img" width="50%">
+![img](assets/metamask12.png){style="min-width:350px;width:50%"}
 
 4.전송할 금액을 입력합니다.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask13.png" alt="img" width="50%">
+![img](assets/metamask13.png){style="min-width:350px;width:50%"}
 
 5.거래를 확인하고 "다음" 버튼을 클릭합니다.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask14.png" alt="img" width="50%">
+![img](assets/metamask14.png){style="min-width:350px;width:50%"}
 
 6.트랜잭션을 보내려면 "확인"을 클릭하십시오.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask15.png" alt="img" width="50%">
+![img](assets/metamask15.png){style="min-width:350px;width:50%"}
 
 7.트랜잭션이 새 블록에 포함될 때까지 기다리십시오.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask16.png" alt="img" width="50%">
+![img](assets/metamask16.png){style="min-width:350px;width:50%"}
 
 8.거래가 확인되면 블록 탐색기에서 세부 정보를 클릭하여 확인합니다.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask17.png" alt="img" width="50%">
+![img](assets/metamask17.png){style="min-width:350px;width:50%"}
 
 9.계정을 클릭하여 "세부 정보"를 확인하십시오.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask18.png" alt="img" width="50%">
+![img](assets/metamask18.png){style="min-width:350px;width:50%"}
 
 10.블록탐색기에서 트랜잭션을 확인합니다.
 
@@ -120,31 +120,31 @@
 
 1.MetaMask에서 "토큰 가져오기"를 클릭합니다.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask46.png" alt="img" width="50%">
+![img](assets/metamask46.png){style="min-width:350px;width:50%"}
 
 2.맞춤형토큰을 선택하고 상자에 컨트랙트 주소를 복사합니다.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask47.png" alt="img" width="50%">
+![img](assets/metamask47.png){style="min-width:350px;width:50%"}
 
 3."토큰 가져오기" 버튼을를 클릭합니다.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask48.png" alt="img" width="50%">
+![img](assets/metamask48.png){style="min-width:350px;width:50%"}
 
 4.그러면 당신은 당신의 잔고를 볼 수 있다.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask49.png" alt="img" width="50%">
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask50.png" alt="img" width="50%">
+![img](assets/metamask49.png){style="min-width:350px;width:50%"}
+![img](assets/metamask50.png){style="min-width:350px;width:50%"}
 
 ## **여러개의 계정 만드는 방법**
 
 1.계정을 여러 개 만들려면 메타마스크의 Profile 아이콘을 클릭한 다음 "계정 생성" 메뉴를 클릭합니다.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask30.png" alt="img" width="50%">
+![img](assets/metamask30.png){style="min-width:350px;width:50%"}
 
 2.그런 다음 계정 이름을 추가하고 "생성" 버튼을 클릭합니다.
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask31.png" alt="img" width="50%">
+![img](assets/metamask31.png){style="min-width:350px;width:50%"}
 
 3.그러면 새 계정이 생성된 것을 볼 수 있습니다!
 
-<img src="https://bosagora.github.io/docs-biznet/kr/biznet/wallet/tutorials/assets/metamask32.png" alt="img" width="50%">
+![img](assets/metamask32.png){style="min-width:350px;width:50%"}

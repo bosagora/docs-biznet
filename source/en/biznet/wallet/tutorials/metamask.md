@@ -35,7 +35,7 @@ The workflow is the same for all browsers
 
 2.Create Password of at least 8 characters
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask04.png" alt="img" width="50%">
+![img](assets/metamask04.png){style="min-width:350px;width:50%"}
 
 3.Click on "Create" and then write down your backup phrase.
 
@@ -80,35 +80,35 @@ Congratulations! you have creat your MetaMask account!
 
 2.Click on Send button
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask11.png" alt="img" width="50%">
+![img](assets/metamask11.png){style="min-width:350px;width:50%"}
 
 3.Copy the receiver’s address in the box
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask12.png" alt="img" width="50%">
+![img](assets/metamask12.png){style="min-width:350px;width:50%"}
 
 4.Input the amount
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask13.png" alt="img" width="50%">
+![img](assets/metamask13.png){style="min-width:350px;width:50%"}
 
 5.Confirm your transaction, then click Next
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask14.png" alt="img" width="50%">
+![img](assets/metamask14.png){style="min-width:350px;width:50%"}
 
 6.Click Confirm to send your transaction
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask15.png" alt="img" width="50%">
+![img](assets/metamask15.png){style="min-width:350px;width:50%"}
 
 7.Wait for your transaction to be included in the new block
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask16.png" alt="img" width="50%">
+![img](assets/metamask16.png){style="min-width:350px;width:50%"}
 
 8.Once your transaction is confirmed, check it on block explorer by clicking Details
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask17.png" alt="img" width="50%">
+![img](assets/metamask17.png){style="min-width:350px;width:50%"}
 
 9.Click on your account to see "Details''
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask18.png" alt="img" width="50%">
+![img](assets/metamask18.png){style="min-width:350px;width:50%"}
 
 10.Verify your transaction in Explorer:
 
@@ -118,31 +118,31 @@ Congratulations! you have creat your MetaMask account!
 
 1.In MetaMask, Click on "Import Tokens"
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask46.png" alt="img" width="50%">
+![img](assets/metamask46.png){style="min-width:350px;width:50%"}
 
 2.Choose "Custom Token" and copy the contract address in the box
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask47.png" alt="img" width="50%">
+![img](assets/metamask47.png){style="min-width:350px;width:50%"}
 
 3.Click on "Add Custom Tokens"
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask48.png" alt="img" width="50%">
+![img](assets/metamask48.png){style="min-width:350px;width:50%"}
 
 4.Then you can see change of your balance
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask49.png" alt="img" width="50%">
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask50.png" alt="img" width="50%">
+![img](assets/metamask49.png){style="min-width:350px;width:50%"}
+![img](assets/metamask50.png){style="min-width:350px;width:50%"}
 
 ## Create Multiple Accounts
 
 1.To create multiple accounts, you click on Profile icon on MetaMask and then click on Create Account
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask30.png" alt="img" width="50%">
+![img](assets/metamask30.png){style="min-width:350px;width:50%"}
 
 2.You can then add an account name and click on Create.
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask31.png" alt="img" width="50%">
+![img](assets/metamask31.png){style="min-width:350px;width:50%"}
 
 3.Then you can see a new account is created!
 
-<img src="https://bosagora.github.io/docs-biznet/en/biznet/wallet/tutorials/assets/metamask32.png" alt="img" width="50%">
+![img](assets/metamask32.png){style="min-width:350px;width:50%"}
