@@ -90,3 +90,15 @@ nav:
             - 가이드: biznet/wallet/guide.md
             - 키관리: biznet/wallet/key-management.md
             - 메타마스크: biznet/wallet/tutorials/metamask.md
+    - BOASwap:
+        - 소개: boa_swap/introduction.md
+        - 월렛 연결하기: boa_swap/wallet/connectwallet.md
+        - 나의 자산:
+            - 나의 자산: boa_swap/myassets/myassets.md
+        - 스왑:
+            - 소개: boa_swap/swap/swap.md
+            - 스왑하기: boa_swap/swap/use-swap.md
+        - 브릿지:
+            - 소개: boa_swap/bridge/bridge.md
+            - 브릿지 사용하기: boa_swap/bridge/use-bridge.md
+        - 유동성: boa_swap/pool/pool.md

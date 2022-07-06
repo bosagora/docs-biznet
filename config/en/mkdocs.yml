@@ -90,3 +90,16 @@ nav:
             - Guide: biznet/wallet/guide.md
             - Key Management: biznet/wallet/key-management.md
             - Metamask: biznet/wallet/tutorials/metamask.md
+    - BOASwap:
+        - Introduction: boa_swap/introduction.md
+        - Connecting to a Wallet: boa_swap/wallet/connectwallet.md
+        - My assets:
+            - My assets: boa_swap/myassets/myassets.md
+        - Swap:
+            - Introduction: boa_swap/swap/swap.md
+            - How to use Swap: boa_swap/swap/use-swap.md
+        - Pool:
+            - Pool: boa_swap/pool/pool.md
+        - Bridge:
+            - Introduction: boa_swap/bridge/bridge.md
+            - How to use Bridge: boa_swap/bridge/use-bridge.md
