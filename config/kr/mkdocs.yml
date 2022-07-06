@@ -93,12 +93,13 @@ nav:
     - BOASwap:
         - 소개: boa_swap/introduction.md
         - 월렛 연결하기: boa_swap/wallet/connectwallet.md
-        - 나의 자산:
-            - 나의 자산: boa_swap/myassets/myassets.md
-        - 스왑:
+        - My assets:
+            - 소개: boa_swap/myassets/myassets.md
+        - Swap:
             - 소개: boa_swap/swap/swap.md
-            - 스왑하기: boa_swap/swap/use-swap.md
-        - 브릿지:
+            - Swap 사용하기: boa_swap/swap/use-swap.md
+        - Pool:
+            - 소개: boa_swap/pool/pool.md
+        - Bridge:
             - 소개: boa_swap/bridge/bridge.md
-            - 브릿지 사용하기: boa_swap/bridge/use-bridge.md
-        - 유동성: boa_swap/pool/pool.md
+            - Bridge 사용하기: boa_swap/bridge/use-bridge.md
