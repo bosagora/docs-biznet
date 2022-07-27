@@ -29,9 +29,10 @@ BOASwap을 이용하기 위해서는 기본적으로 PC 브라우저에 확장 �
 ** 수동 네트워크 추가시 정보 **
 
 * 네트워크 이름 : BizNet
-* 네트워크 URL : https://mainnet.bosagora.org
+* 새 RPC URL : https://mainnet.bosagora.org
 * 체인 ID : 2151
-* 블록 탐색기 URL(옵션) : https://scan.bosagora.org
+* 통화 기호 : BOA
+* 블록탐색기 URL(옵션) : https://scan.bosagora.org
 
 ![img](assets/network.png)
 

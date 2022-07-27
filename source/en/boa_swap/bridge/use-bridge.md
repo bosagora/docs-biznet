@@ -16,7 +16,7 @@ Since the bridge supports bidirectional transmission, It will first explain the 
 
   ** Transfer amount - (Fee + Gas Tokens for use) = Amount received **
 
-  Please note that the exchange rate is 1 BOA ≈ 1 BOA, but the fee will be deducted to measure the amount received by the arrival network because the Atomic swap algorithm generates gas costs in each network.
+  Please note that the exchange rate is 1 BOA = 1 BOA, but the fee will be deducted to measure the amount received by the arrival network because the Atomic swap algorithm generates gas costs in each network.
 
 * Click Approve BOA to approve. This is to approve withdrawal from the smart contract.
   ![img](assets/bridge-3.png)
@@ -41,7 +41,6 @@ Since the bridge supports bidirectional transmission, It will first explain the 
     ** Please do not move the browser address during the Pending state and wait. **
 
     ** BOASwap needs to generate and submit a secret key, check the Bridge relay node, and run the Bridge protocol. **
-  ![img](assets/bridge-10.png)
 
 * If the Close button is visible, this process is complete. Click the "Close" button.
   ![img](assets/bridge-11.png)
