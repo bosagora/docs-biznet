@@ -17,7 +17,7 @@ Bridge는 양방향 전송을 지원 하므로 먼저 Ethereum Mainnet ERC20 BOA
 
     ** 전송금액 - (Fee(교환 수수료) + Gas Tokens for use(트랜잭션 가스비)) = 받는 금액 ** 
 
-    아토믹스왑 알고리즘 으로 각각의 네트워크에서 가스비가 발생 되므로 환율은 1 BOA ≈ 1 BOA 이지만 수수료가 차감되어 도착 네트워크의 받는금액이 측정 되므로 이점을 주의해주시기 바랍니다.
+    아토믹스왑 알고리즘 으로 각각의 네트워크에서 가스비가 발생 되므로 환율은 1 BOA = 1 BOA 이지만 수수료가 차감되어 도착 네트워크의 받는금액이 측정 되므로 이점을 주의해주시기 바랍니다.
 
 * Approve BOA 를 클릭하여 승인 합니다. 이것은 스마트컨트랙 에서 출금 할 수 있도록 승인 하는 것 입니다.
   ![img](assets/bridge-3.png)
@@ -42,7 +42,6 @@ Bridge는 양방향 전송을 지원 하므로 먼저 Ethereum Mainnet ERC20 BOA
     ** Pending 상태 동안 브라우저 주소를 이동하지 말고 기다려 주시기 바랍니다. **
 
     ** BOASwap은 비밀키를 생성하여 제출 해야 하며 Bridge relay node가 확인하고 Bridge 프로토콜이 실행 되는 시간이 필요 합니다. **
-  ![img](assets/bridge-10.png)
 
 * Close 버튼이 보인다면 이 과정은 모두 완료 되었습니다. "Close" 버튼을 클릭 합니다.
   ![img](assets/bridge-11.png)

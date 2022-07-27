@@ -17,7 +17,7 @@ The current screenshot image is the situation of BizTestNet. The actual run must
 ![img](assets/swap-01.png)  
 
 * Enter the amount to be exchanged. If you enter the input token amount amount at the top, the amount of tokens you will receive is determined by the liquidity price curve of the BOASwap DEX Protocol.
-* The fee is measured at 1.5%, which is the sum of the liquidity provider fee and the protocol fee.
+* The fees is measured at 1.5%, which is the sum of the liquidity provider fee and the protocol fee.
 * Approve runs when swapping, and a small amount of network gas cost is required for swapping.
 ![img](assets/swap-1.png)
 

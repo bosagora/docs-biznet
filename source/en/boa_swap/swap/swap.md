@@ -15,10 +15,10 @@ A liquidity pool is a smart contract that holds the balance of two unique tokens
 - Our BOASwap DEX Protocol basically follows Uniswap V2. BOASwap Protocol is a binary smart contract system.
   BOASwap Interfaces allow you to interact with the BOASwap DEX Protocol directly with smart contracts without relying on intermediaries or requiring permissions.
 
-#### Fee
-- The token exchange fee is 1.5%. This fee is split to the liquidity provider in proportion to its contribution to the liquidity reserve.
-  The exchange fee is immediately deposited as a liquidity reserve, which increases the value of the liquidity token and is used as a payment to all liquidity providers proportional to the pool's share.
-  Fees are collected by incinerating liquidity tokens and eliminating a proportional share of reserves.
-  A protocol fee of 0.5% per transaction is applied. This is 1/3 of the token exchange fee.
-  This fee does not affect the fees paid by the trader, but it does affect the amount received by the liquidity provider.
-  Cost is calculated when liquidity is added or removed instead of calculating swap costs that significantly increase gas costs for all users.
+#### Fees
+- The token exchange fees is 1.5%. This fees is split to the liquidity providers in proportion to their contributions to the liquidity reserve.
+  The exchange fees is immediately deposited to the liquidity reserve, which increases the value of the liquidity token and is used as a payment to all liquidity providers proportional to their share of the pool.
+  The liquidity provider fees are collected by burning liquidity tokens and eliminating a proportional share of the underlying reserve.
+  A protocol fees of 0.5% per transaction is applied to the liquidity providers. This is 1/3 of the token exchange fee.
+  This fees does not affect the fees paid by traders, but it does affect the amount received by the liquidity providers.
+  The protocol fees is calculated when liquidity is added or removed instead of calculating swap costs that can significantly increase gas costs for all users.
